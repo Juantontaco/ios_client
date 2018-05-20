@@ -15,7 +15,9 @@
 		131543CD20AF6EF7002BD3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131543CB20AF6EF7002BD3E1 /* LaunchScreen.storyboard */; };
 		131543D820AF6EF7002BD3E1 /* ios_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131543D720AF6EF7002BD3E1 /* ios_clientTests.swift */; };
 		131543E320AF6EF7002BD3E1 /* ios_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131543E220AF6EF7002BD3E1 /* ios_clientUITests.swift */; };
-		134F80A020AFE97C00B13E64 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* HomeViewController.swift */; };
+		134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* AccountViewController.swift */; };
+		134F80A220B0B6A000B13E64 /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F80A120B0B6A000B13E64 /* NavigationControllerExtensions.swift */; };
+		134F80A420B0BF3C00B13E64 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F80A320B0BF3C00B13E64 /* ViewControllerExtensions.swift */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
 		16F455420159CB9D28ADAAF6 /* Pods_ios_clientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F6C608A8C4E8CAAC5CFB9 /* Pods_ios_clientUITests.framework */; };
@@ -58,7 +60,9 @@
 		131543E220AF6EF7002BD3E1 /* ios_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_clientUITests.swift; sourceTree = "<group>"; };
 		131543E420AF6EF7002BD3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		134F809E20AFDD2500B13E64 /* ios_client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_client.entitlements; sourceTree = "<group>"; };
-		134F809F20AFE97C00B13E64 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		134F809F20AFE97C00B13E64 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		134F80A120B0B6A000B13E64 /* NavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensions.swift; sourceTree = "<group>"; };
+		134F80A320B0BF3C00B13E64 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		150A6F0F5A3DCA54C1E51EF7 /* Pods-ios_clientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_clientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_clientUITests/Pods-ios_clientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,13 +131,15 @@
 				131543BF20AF6EF4002BD3E1 /* AppDelegate.swift */,
 				131543C120AF6EF4002BD3E1 /* LoginViewController.swift */,
 				131543C320AF6EF4002BD3E1 /* Main.storyboard */,
-				134F809F20AFE97C00B13E64 /* HomeViewController.swift */,
+				134F809F20AFE97C00B13E64 /* AccountViewController.swift */,
 				131543C920AF6EF7002BD3E1 /* Assets.xcassets */,
 				131543CB20AF6EF7002BD3E1 /* LaunchScreen.storyboard */,
 				131543CE20AF6EF7002BD3E1 /* Info.plist */,
 				131543C620AF6EF4002BD3E1 /* ios_client.xcdatamodeld */,
 				13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */,
 				13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */,
+				134F80A120B0B6A000B13E64 /* NavigationControllerExtensions.swift */,
+				134F80A320B0BF3C00B13E64 /* ViewControllerExtensions.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -378,11 +384,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios_client/Pods-ios_client-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -396,12 +404,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134F80A420B0BF3C00B13E64 /* ViewControllerExtensions.swift in Sources */,
 				131543C220AF6EF4002BD3E1 /* LoginViewController.swift in Sources */,
 				131543C820AF6EF4002BD3E1 /* ios_client.xcdatamodeld in Sources */,
+				134F80A220B0B6A000B13E64 /* NavigationControllerExtensions.swift in Sources */,
 				13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */,
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
-				134F80A020AFE97C00B13E64 /* HomeViewController.swift in Sources */,
+				134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

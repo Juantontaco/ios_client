@@ -19,13 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        (window?.rootViewController as! UINavigationController).becomeTransparent()
+        
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
         
         if (dictionary != nil && dictionary!["Access-Token"] != nil) {
             
-            let homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+            let accountViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
             
-            (window?.rootViewController as! UINavigationController).setViewControllers([homeViewController!], animated: true)
+            (window?.rootViewController as! UINavigationController).setViewControllers([accountViewController!], animated: true)
             
         }
         

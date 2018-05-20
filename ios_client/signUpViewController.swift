@@ -10,13 +10,26 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var firstNameField: UITextField!
+    
+    @IBOutlet weak var lastNameField: UITextField!
+    
     @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        addVerticalGradient()
+        
+        signUpButton.layer.borderWidth = 2
+        signUpButton.layer.cornerRadius = 15
+        signUpButton.layer.borderColor = UIColor.white.cgColor
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,10 +39,16 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUpPressed(_ sender: Any) {
+        let firstName: String = firstNameField.text!
+        let lastName: String = lastNameField.text!
         
-        NetworkHelper().signUp(email: emailField.text!, password: passwordField.text!, completion: { didWork in
+        NetworkHelper().signUp(name: "\(firstName) \(lastName)", email: emailField.text!, password: passwordField.text!, completion: { didWork in
             if didWork {
-                print(didWork)
+                print("did create account")
+                
+                let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
+                
+                self.navigationController?.setViewControllers([accountViewController!], animated: true)
             } else {
                 print("didNotWork")
             }

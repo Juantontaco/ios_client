@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  AccountViewController.swift
 //  ios_client
 //
 //  Created by Max Dignan on 5/19/18.
@@ -9,11 +9,16 @@
 import UIKit
 import Locksmith
 
-class HomeViewController: UIViewController {
+class AccountViewController: UIViewController {
 
     @IBOutlet weak var showUID: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addVerticalGradient()
+        showMenu()
+        showLogo()
+        
 
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
         

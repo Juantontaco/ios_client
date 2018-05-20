@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        addVerticalGradient()
+        
         signInButton.layer.borderWidth = 2
         signInButton.layer.cornerRadius = 15
         signInButton.layer.borderColor = UIColor.white.cgColor
@@ -32,6 +34,18 @@ class LoginViewController: UIViewController {
 
 
     @IBAction func signInPressed(_ sender: Any) {
+        NetworkHelper().signIn(email: emailField.text!, password: passwordField.text!, completion: { didWork in
+            if didWork {
+                print("did sign into account")
+                
+                let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
+                
+                self.navigationController?.setViewControllers([accountViewController!], animated: true)
+            } else {
+                print("didNotWork")
+                self.toastMessage(message: "Login Credentials Invalid", danger: true)
+            }
+        })
     }
     
     
@@ -40,7 +54,7 @@ class LoginViewController: UIViewController {
         
         let signUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
         
-    self.navigationController?.pushViewController(signUpViewController!, animated: true)
+        self.navigationController?.pushViewController(signUpViewController!, animated: true)
 
     }
     

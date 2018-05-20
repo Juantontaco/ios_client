@@ -8,7 +8,7 @@ target 'ios_client' do
   # Pods for ios_client
   pod 'Alamofire', '~> 4.7'
   pod 'Locksmith'
-
+  pod 'Toast-Swift', '~> 3.0.1'
 
   target 'ios_clientTests' do
     inherit! :search_paths

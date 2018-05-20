@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
   - Locksmith (4.0.0)
+  - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Locksmith
+  - Toast-Swift (~> 3.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Locksmith
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 98bd6f3ec49e080e5560e5a07e442109775ea180
+PODFILE CHECKSUM: 3a0d24abe394db600bb5b4d42b5c6145f5e862b2
 
 COCOAPODS: 1.5.2
