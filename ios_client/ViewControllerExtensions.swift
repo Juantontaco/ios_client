@@ -27,24 +27,17 @@ extension UIViewController {
     
     func showMenu() {
         
-//        let menuButton = UIButton()
+        let menuButton = UIButton()
         
-//        menuButton.frame = CGRect(x: 5, y: 7, width: 70, height: 70)
+        menuButton.frame = CGRect(x: 5, y: 7, width: 70, height: 70)
         
-//        menuButton.setImage(UIImage(named: "hamburgerMenu"), for: .normal)
-        
-        
-        
-//        menuButton.addTarget(self, action: #selector(menuButtonPressed), for: .touchUpInside)
-        
-//        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuButtonPressed))
-        
-        if navigationController?.navigationBar.topItem?.leftBarButtonItems == nil {
-            navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburgerMenu"), style: .plain, target: self, action: #selector(menuButtonPressed))
-        }
+        menuButton.setImage(UIImage(named: "hamburgerMenu"), for: .normal)
         
         
-//        self.view.addSubview(menuButton)
+        menuButton.addTarget(self, action: #selector(menuButtonPressed), for: .touchUpInside)
+        
+        
+        self.view.addSubview(menuButton)
     }
     
     func showLogo() {
@@ -84,7 +77,11 @@ extension UIViewController {
 //        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionLinear)
 //        view.window!.layer.add(transition, forKey: kCATransitionFromRight)
         
-        navigationController?.setViewControllers([menuViewController!], animated: false)
+//        navigationController?.setViewControllers([menuViewController!], animated: false)
+        
+        menuViewController?.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        self.present(menuViewController!, animated: true, completion: nil)
 
     }
     

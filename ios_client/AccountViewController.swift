@@ -50,7 +50,9 @@ class AccountViewController: UIViewController {
         
         let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
         
-        self.navigationController?.setViewControllers([loginViewController!], animated: false)
+//        self.navigationController?.setViewControllers([loginViewController!], animated: false)
+        
+        self.present(loginViewController!, animated: false, completion: nil)
     }
     
     @IBAction func changePasswordPressed(_ sender: Any) {

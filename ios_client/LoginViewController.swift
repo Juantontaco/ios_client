@@ -39,7 +39,9 @@ class LoginViewController: UIViewController {
                 
                 let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
                 
-                self.navigationController?.setViewControllers([accountViewController!], animated: true)
+//                self.navigationController?.setViewControllers([accountViewController!], animated: true)
+                
+                self.present(accountViewController!, animated: true, completion: nil)
             } else {
                 print("didNotWork")
                 self.toastMessage(message: "Login Credentials Invalid", danger: true)
@@ -53,7 +55,9 @@ class LoginViewController: UIViewController {
         
         let signUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
         
-        self.navigationController?.pushViewController(signUpViewController!, animated: true)
+//        self.navigationController?.pushViewController(signUpViewController!, animated: true)
+        
+        self.present(signUpViewController!, animated: true, completion: nil)
 
     }
     

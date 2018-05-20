@@ -42,7 +42,14 @@ class MenuViewController: UIViewController {
 
         let accountViewController : AccountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
         
-        self.navigationController?.setViewControllers([accountViewController], animated: true)
+//        self.navigationController?.setViewControllers([accountViewController], animated: true)
+        
+        accountViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        
+
+        
+        self.present(accountViewController, animated: true, completion: nil)
     }
     
     @IBAction func paymentPressed(_ sender: Any) {}

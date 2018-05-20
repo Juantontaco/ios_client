@@ -49,7 +49,9 @@ class SignUpViewController: UIViewController {
                 
                 let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
                 
-                self.navigationController?.setViewControllers([accountViewController!], animated: true)
+//                self.navigationController?.setViewControllers([accountViewController!], animated: true)
+                
+                self.present(accountViewController!, animated: true, completion: nil)
             } else {
                 print("didNotWork")
             }
