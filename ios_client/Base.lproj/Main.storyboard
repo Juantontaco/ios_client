@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,23 +19,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-pb-wIs">
-                                <rect key="frame" x="56" y="175" width="262" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-pb-wIs">
+                                <rect key="frame" x="56" y="175" width="263" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UXc-pb-wIs" secondAttribute="height" multiplier="263:30" id="gFI-Qt-ga0"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hd4-Em-bAw">
-                                <rect key="frame" x="56" y="235" width="262" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hd4-Em-bAw">
+                                <rect key="frame" x="56" y="234" width="262" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hd4-Em-bAw" secondAttribute="height" multiplier="131:15" id="VIu-i7-GOK"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1U-fL-wy6">
-                                <rect key="frame" x="56" y="274" width="262" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1U-fL-wy6">
+                                <rect key="frame" x="56" y="273" width="262" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K1U-fL-wy6" secondAttribute="height" multiplier="131:16" id="tN8-J0-PsA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,9 +50,11 @@
                                     <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SfB-5w-S4O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGk-uQ-cIp">
-                                <rect key="frame" x="135" y="340" width="106" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGk-uQ-cIp">
+                                <rect key="frame" x="147.5" y="339" width="79" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FGk-uQ-cIp" secondAttribute="height" multiplier="106:43" id="o77-R3-Ste"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,33 +63,45 @@
                                     <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="897-sl-cEx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please sign in to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXx-7r-UfG">
-                                <rect key="frame" x="91" y="128" width="195" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-eO-25r">
-                                <rect key="frame" x="134" y="64" width="108" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39y-tN-rL3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39y-tN-rL3">
                                 <rect key="frame" x="180" y="314" width="17" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="39y-tN-rL3" secondAttribute="height" multiplier="17:20" id="4hN-3E-hxf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22N-fD-4gf">
-                                <rect key="frame" x="107" y="18" width="158" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please sign in to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXx-7r-UfG">
+                                <rect key="frame" x="89" y="129" width="195" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-eO-25r">
+                                <rect key="frame" x="149" y="88" width="79" height="24.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UXc-pb-wIs" firstAttribute="top" secondItem="QXx-7r-UfG" secondAttribute="bottom" constant="24" id="1uK-WU-Tpv"/>
+                            <constraint firstItem="FGk-uQ-cIp" firstAttribute="centerX" secondItem="39y-tN-rL3" secondAttribute="centerX" id="5TW-dY-wVf"/>
+                            <constraint firstItem="39y-tN-rL3" firstAttribute="top" secondItem="K1U-fL-wy6" secondAttribute="bottom" constant="8" id="76D-Sg-POK"/>
+                            <constraint firstItem="jaC-eO-25r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="7Ut-5w-zqW"/>
+                            <constraint firstItem="K1U-fL-wy6" firstAttribute="centerX" secondItem="hd4-Em-bAw" secondAttribute="centerX" id="CQc-I0-RwJ"/>
+                            <constraint firstItem="UXc-pb-wIs" firstAttribute="centerX" secondItem="QXx-7r-UfG" secondAttribute="centerX" id="Nyw-hk-DhF"/>
+                            <constraint firstItem="39y-tN-rL3" firstAttribute="centerX" secondItem="K1U-fL-wy6" secondAttribute="centerX" id="QKL-2i-6CO"/>
+                            <constraint firstItem="hd4-Em-bAw" firstAttribute="centerX" secondItem="UXc-pb-wIs" secondAttribute="centerX" id="act-oe-C4n"/>
+                            <constraint firstItem="FGk-uQ-cIp" firstAttribute="top" secondItem="39y-tN-rL3" secondAttribute="bottom" constant="6" id="dgS-cm-fir"/>
+                            <constraint firstItem="QXx-7r-UfG" firstAttribute="top" secondItem="jaC-eO-25r" secondAttribute="bottom" constant="16.5" id="eAW-Pm-e9I"/>
+                            <constraint firstItem="jaC-eO-25r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWq-TT-VG1"/>
+                            <constraint firstItem="QXx-7r-UfG" firstAttribute="centerX" secondItem="jaC-eO-25r" secondAttribute="centerX" id="jGR-Ta-yPi"/>
+                            <constraint firstItem="K1U-fL-wy6" firstAttribute="top" secondItem="hd4-Em-bAw" secondAttribute="bottom" constant="9" id="wih-Zf-Dwg"/>
+                            <constraint firstItem="hd4-Em-bAw" firstAttribute="top" secondItem="UXc-pb-wIs" secondAttribute="bottom" constant="29" id="z9S-Yq-YKt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="JYm-lb-GtU"/>
@@ -92,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138.40000000000001" y="-80.50974512743629"/>
+            <point key="canvasLocation" x="-231.19999999999999" y="-81.409295352323838"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="9nu-Z5-B95">
@@ -102,26 +123,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksc-0A-RWn">
-                                <rect key="frame" x="163" y="259" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28E-hj-hog">
+                                <rect key="frame" x="16" y="126" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="28E-hj-hog" secondAttribute="height" multiplier="49:3" id="Mqr-gF-YXz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unQ-yq-Lze">
+                                <rect key="frame" x="16" y="83" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="unQ-yq-Lze" secondAttribute="height" multiplier="49:3" id="EwW-Lg-joP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG1-Eu-yAO">
+                                <rect key="frame" x="16" y="180" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QG1-Eu-yAO" secondAttribute="height" multiplier="343:46" id="X0x-DG-Yrh"/>
+                                </constraints>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePasswordPressed:" destination="3qe-XB-o44" eventType="touchUpInside" id="87B-Xx-0Au"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksc-0A-RWn">
+                                <rect key="frame" x="16" y="261" width="343" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ksc-0A-RWn" secondAttribute="height" multiplier="343:54" id="ZhB-mw-tQ3"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="logoutPressed:" destination="3qe-XB-o44" eventType="touchUpInside" id="ff5-Kj-kCD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28E-hj-hog">
-                                <rect key="frame" x="59" y="323" width="256" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QG1-Eu-yAO" firstAttribute="centerX" secondItem="Mf0-3L-6r8" secondAttribute="centerX" id="2zt-W9-FJL"/>
+                            <constraint firstItem="unQ-yq-Lze" firstAttribute="centerX" secondItem="Mf0-3L-6r8" secondAttribute="centerX" id="3eh-h4-3qO"/>
+                            <constraint firstItem="28E-hj-hog" firstAttribute="centerX" secondItem="Mf0-3L-6r8" secondAttribute="centerX" id="6Av-kt-M29"/>
+                            <constraint firstItem="QG1-Eu-yAO" firstAttribute="top" secondItem="28E-hj-hog" secondAttribute="bottom" constant="33" id="Ask-LT-DW6"/>
+                            <constraint firstItem="unQ-yq-Lze" firstAttribute="top" secondItem="Mf0-3L-6r8" secondAttribute="top" constant="63" id="Fz1-oj-xBA"/>
+                            <constraint firstItem="ksc-0A-RWn" firstAttribute="centerX" secondItem="Mf0-3L-6r8" secondAttribute="centerX" id="Ngx-44-nla"/>
+                            <constraint firstItem="28E-hj-hog" firstAttribute="top" secondItem="unQ-yq-Lze" secondAttribute="bottom" constant="22" id="mQJ-vu-nPi"/>
+                            <constraint firstItem="ksc-0A-RWn" firstAttribute="top" secondItem="QG1-Eu-yAO" secondAttribute="bottom" constant="35" id="ux4-eF-O6t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mf0-3L-6r8"/>
                     </view>
                     <connections>
+                        <outlet property="changePasswordButton" destination="QG1-Eu-yAO" id="x4L-Sk-Lbq"/>
+                        <outlet property="logoutButton" destination="ksc-0A-RWn" id="1u1-Ea-3mL"/>
+                        <outlet property="nameLabel" destination="unQ-yq-Lze" id="FNu-Tk-skz"/>
                         <outlet property="showUID" destination="28E-hj-hog" id="jYg-ea-PuT"/>
                     </connections>
                 </viewController>
@@ -138,76 +199,114 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzq-BN-NRd">
-                                <rect key="frame" x="41" y="79" width="132" height="32"/>
+                                <rect key="frame" x="41" y="133" width="132" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="EARN FREE RIDES">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="earnFreeRidesPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="ffK-dw-fnO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9J-No-SWu">
-                                <rect key="frame" x="41" y="119" width="207" height="32"/>
+                                <rect key="frame" x="41" y="173" width="207" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="CHARGE ZOOTERS FOR $$">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="chargeZootersPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="Xde-84-4Me"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDF-HV-MkF">
-                                <rect key="frame" x="41" y="159" width="152" height="32"/>
+                                <rect key="frame" x="41" y="213" width="152" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="REQUEST A HELMET">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="requestHelmetPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="hje-aN-sEZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edc-W4-Brj">
-                                <rect key="frame" x="41" y="199" width="85" height="32"/>
+                                <rect key="frame" x="41" y="253" width="85" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="ACCOUNT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="accountPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="vsx-Vf-7nk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRS-rw-3Cb">
-                                <rect key="frame" x="41" y="239" width="73" height="32"/>
+                                <rect key="frame" x="41" y="293" width="73" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="PAYMENT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="paymentPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="fQG-da-X3I"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1u-XV-g5n">
-                                <rect key="frame" x="41" y="279" width="123" height="32"/>
+                                <rect key="frame" x="41" y="333" width="123" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="HOW TO ZOOT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="howToPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="Uez-qd-6PX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09z-4o-eVo">
-                                <rect key="frame" x="41" y="319" width="57" height="32"/>
+                                <rect key="frame" x="41" y="373" width="57" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="SAFETY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="safetyPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="sFN-Ie-bEB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pk-Wa-ZNe">
-                                <rect key="frame" x="41" y="359" width="67" height="32"/>
+                                <rect key="frame" x="41" y="413" width="67" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="HISTORY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="historyPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="lK9-bI-VKN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw4-gg-YBl">
-                                <rect key="frame" x="41" y="399" width="75" height="32"/>
+                                <rect key="frame" x="41" y="453" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="SETTINGS">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="settingsPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="Gva-JE-XS6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auu-mR-xPB">
+                                <rect key="frame" x="41" y="71" width="49" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="HOME">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="homePressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="FSu-Yy-YYZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>

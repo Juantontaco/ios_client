@@ -27,39 +27,64 @@ extension UIViewController {
     
     func showMenu() {
         
-        let menuButton = UIButton()
+//        let menuButton = UIButton()
         
-        menuButton.frame = CGRect(x: 5, y: 5, width: 70, height: 70)
+//        menuButton.frame = CGRect(x: 5, y: 7, width: 70, height: 70)
         
-        menuButton.setImage(UIImage(named: "hamburgerMenu"), for: .normal)
-        menuButton.addTarget(self, action: #selector(menuButtonPressed), for: .touchUpInside)
+//        menuButton.setImage(UIImage(named: "hamburgerMenu"), for: .normal)
         
-        self.view.addSubview(menuButton)
+        
+        
+//        menuButton.addTarget(self, action: #selector(menuButtonPressed), for: .touchUpInside)
+        
+//        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuButtonPressed))
+        
+        if navigationController?.navigationBar.topItem?.leftBarButtonItems == nil {
+            navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburgerMenu"), style: .plain, target: self, action: #selector(menuButtonPressed))
+        }
+        
+        
+//        self.view.addSubview(menuButton)
     }
     
     func showLogo() {
         let logo : UIImage = #imageLiteral(resourceName: "zoot_logo")
-        let logoView = UIImageView(image: logo)
         
         let width = 150
-        let height = 40
+        let height = 70
         
-        logoView.frame = CGRect(x: Int((self.view.bounds.width / 2) - (CGFloat.init(width) / 2)), y: 25, width: width, height: height)
+        let rect = CGRect(x: Int((self.view.bounds.width / 2) - (CGFloat.init(width) / 2)), y: 0, width: width, height: height)
+        
+        let logoView = UIImageView(image: logo)
+        
+        logoView.frame = rect
+        
+        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(homeButtonPressed))
+        
+        gestureRec.numberOfTapsRequired = 1
+        
+        logoView.isUserInteractionEnabled = true
+        logoView.addGestureRecognizer(gestureRec)
         
         self.view.addSubview(logoView)
     }
     
+    @objc func homeButtonPressed() {
+        print("home button pressed")
+    }
+    
     @objc func menuButtonPressed() {
         let menuViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+//
+//
+//        let transition = CATransition()
+//        transition.duration = 0.1
+//        transition.type = kCATransitionFromRight
+////        transition.subtype = kCATransitionFromLeft
+//        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionLinear)
+//        view.window!.layer.add(transition, forKey: kCATransitionFromRight)
         
-        
-        let transition = CATransition()
-        transition.duration = 0.25
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromLeft
-        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        navigationController?.present(menuViewController!, animated: false, completion: nil)
+        navigationController?.setViewControllers([menuViewController!], animated: false)
 
     }
     

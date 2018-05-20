@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         addVerticalGradient()
+        showLogo()
 
     }
 
@@ -32,7 +33,27 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func homePressed(_ sender: Any) {}
+    @IBAction func earnFreeRidesPressed(_ sender: Any) {}
+    @IBAction func chargeZootersPressed(_ sender: Any) {}
+    @IBAction func requestHelmetPressed(_ sender: Any) {}
+    
+    @IBAction func accountPressed(_ sender: Any) {
 
+        let accountViewController : AccountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+        
+        self.navigationController?.setViewControllers([accountViewController], animated: true)
+    }
+    
+    @IBAction func paymentPressed(_ sender: Any) {}
+    @IBAction func howToPressed(_ sender: Any) {}
+    @IBAction func safetyPressed(_ sender: Any) {}
+    @IBAction func historyPressed(_ sender: Any) {}
+    @IBAction func settingsPressed(_ sender: Any) {}
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

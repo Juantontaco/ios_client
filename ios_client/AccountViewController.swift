@@ -11,7 +11,12 @@ import Locksmith
 
 class AccountViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var showUID: UILabel!
+    
+    @IBOutlet weak var changePasswordButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,10 +24,14 @@ class AccountViewController: UIViewController {
         showMenu()
         showLogo()
         
+        changePasswordButton.addBorder()
+        logoutButton.addBorder()
 
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
         
-        showUID.text = dictionary?["uid"] as? String
+        showUID.text = dictionary?["email"] as? String
+        
+        nameLabel.text = dictionary?["name"] as? String
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +52,10 @@ class AccountViewController: UIViewController {
         
         self.navigationController?.setViewControllers([loginViewController!], animated: false)
     }
+    
+    @IBAction func changePasswordPressed(_ sender: Any) {
+    }
+    
     
     /*
     // MARK: - Navigation

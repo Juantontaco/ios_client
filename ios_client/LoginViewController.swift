@@ -21,10 +21,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         addVerticalGradient()
+        showLogo()
         
-        signInButton.layer.borderWidth = 2
-        signInButton.layer.cornerRadius = 15
-        signInButton.layer.borderColor = UIColor.white.cgColor
+        signInButton.addBorder()
     }
 
     override func didReceiveMemoryWarning() {

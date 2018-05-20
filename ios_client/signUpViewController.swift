@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         addVerticalGradient()
+        showLogo()
         
         signUpButton.layer.borderWidth = 2
         signUpButton.layer.cornerRadius = 15
