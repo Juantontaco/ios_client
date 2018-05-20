@@ -50,7 +50,17 @@ extension UIViewController {
     }
     
     @objc func menuButtonPressed() {
-        print("menu pressed")
+        let menuViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+        
+        
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        navigationController?.present(menuViewController!, animated: false, completion: nil)
+
     }
     
     func toastMessage(message: String, danger: Bool) {
