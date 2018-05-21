@@ -250,6 +250,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="cancelPressed:" destination="D08-z2-tMd" eventType="touchUpInside" id="UiZ-o1-nUK"/>
                                     <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ud-bc-sfe"/>
                                     <action selector="signUpPressed:" destination="X3p-8v-YqH" eventType="touchUpInside" id="BbV-sx-f6q"/>
                                 </connections>

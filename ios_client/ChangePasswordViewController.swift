@@ -38,7 +38,7 @@ class ChangePasswordViewController: UIViewController {
         let newPassword : String = newPasswordField.text!
         let newPasswordAgain : String = newPasswordAgainField.text!
         
-        if currentPassword.count != 0 && newPassword.count != 0 && newPasswordAgain.count != 0 {
+        if currentPassword.count >= 8 && newPassword.count >= 8 && newPasswordAgain.count >= 8 {
             
             if newPassword == newPasswordAgain {
                 
@@ -59,6 +59,14 @@ class ChangePasswordViewController: UIViewController {
         
     }
     
+    @IBAction func cancelPressed(_ sender: Any) {
+        
+        let accountViewController : AccountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+        
+        accountViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        self.present(accountViewController, animated: true, completion: nil)
+    }
     
 
     /*
