@@ -190,6 +190,97 @@
             </objects>
             <point key="canvasLocation" x="-138.40000000000001" y="673.31334332833592"/>
         </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="wGT-PZ-ovY">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="D08-z2-tMd" customClass="ChangePasswordViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xd9-a9-AV1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rK-5I-EIa">
+                                <rect key="frame" x="56" y="227" width="262" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3rK-5I-EIa" secondAttribute="height" multiplier="131:15" id="DeV-jF-zeW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password Again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISW-FF-xmM">
+                                <rect key="frame" x="56" y="289" width="262" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ISW-FF-xmM" secondAttribute="height" multiplier="131:15" id="BWe-xc-8jI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvN-x5-VOe">
+                                <rect key="frame" x="56" y="349" width="262" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xvN-x5-VOe" secondAttribute="height" multiplier="131:16" id="uUS-vS-oPy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Set New Password">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setNewPasswordPressed:" destination="D08-z2-tMd" eventType="touchUpInside" id="Jbw-xi-I6S"/>
+                                    <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qPy-zN-bT7"/>
+                                    <action selector="signUpPressed:" destination="X3p-8v-YqH" eventType="touchUpInside" id="wad-Va-RS5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-eg-LnX">
+                                <rect key="frame" x="56" y="164" width="262" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qad-eg-LnX" secondAttribute="height" multiplier="131:15" id="OxD-CF-juH"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-Ce-ecS">
+                                <rect key="frame" x="16" y="20" width="85" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fVz-Ce-ecS" secondAttribute="height" multiplier="85:32" id="LxV-kj-AfH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ud-bc-sfe"/>
+                                    <action selector="signUpPressed:" destination="X3p-8v-YqH" eventType="touchUpInside" id="BbV-sx-f6q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qad-eg-LnX" firstAttribute="centerX" secondItem="UG7-Oi-F0B" secondAttribute="centerX" id="2zA-Zr-O1o"/>
+                            <constraint firstItem="xvN-x5-VOe" firstAttribute="centerX" secondItem="UG7-Oi-F0B" secondAttribute="centerX" id="9xU-Nz-43I"/>
+                            <constraint firstItem="3rK-5I-EIa" firstAttribute="centerX" secondItem="UG7-Oi-F0B" secondAttribute="centerX" id="ErK-vx-fOb"/>
+                            <constraint firstItem="3rK-5I-EIa" firstAttribute="top" secondItem="Qad-eg-LnX" secondAttribute="bottom" constant="33" id="U4i-nt-6aH"/>
+                            <constraint firstItem="Qad-eg-LnX" firstAttribute="top" secondItem="UG7-Oi-F0B" secondAttribute="top" constant="144" id="Yc8-J7-cfK"/>
+                            <constraint firstItem="ISW-FF-xmM" firstAttribute="top" secondItem="3rK-5I-EIa" secondAttribute="bottom" constant="32" id="Yrm-bd-cii"/>
+                            <constraint firstItem="ISW-FF-xmM" firstAttribute="centerX" secondItem="UG7-Oi-F0B" secondAttribute="centerX" id="ctL-4E-SCd"/>
+                            <constraint firstItem="fVz-Ce-ecS" firstAttribute="top" secondItem="UG7-Oi-F0B" secondAttribute="top" id="eBR-w1-N2q"/>
+                            <constraint firstItem="xvN-x5-VOe" firstAttribute="top" secondItem="ISW-FF-xmM" secondAttribute="bottom" constant="30" id="uUz-zg-1Vb"/>
+                            <constraint firstItem="fVz-Ce-ecS" firstAttribute="leading" secondItem="UG7-Oi-F0B" secondAttribute="leading" constant="16" id="wj9-5l-zTh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UG7-Oi-F0B"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentPasswordField" destination="Qad-eg-LnX" id="biG-bh-Njf"/>
+                        <outlet property="newPasswordAgainField" destination="ISW-FF-xmM" id="sQc-GG-OwQ"/>
+                        <outlet property="newPasswordField" destination="3rK-5I-EIa" id="ZBV-AB-iRb"/>
+                        <outlet property="setNewPasswordButton" destination="xvN-x5-VOe" id="7s6-82-bIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ik5-Nw-2p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.19999999999999" y="1366.8665667166417"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="7JE-T4-9Pd">
             <objects>

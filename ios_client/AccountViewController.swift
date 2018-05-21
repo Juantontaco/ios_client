@@ -56,6 +56,12 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func changePasswordPressed(_ sender: Any) {
+        
+        let changePasswordViewController : ChangePasswordViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+        
+        changePasswordViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        self.present(changePasswordViewController, animated: true, completion: nil)
     }
     
     

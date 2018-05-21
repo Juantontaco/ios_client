@@ -32,37 +32,13 @@ class NetworkHelper {
                 ], forUserAccount: "user")
             } else {
                 do {
-                    try Locksmith.updateData(data: ["Access-Token": response.response?.allHeaderFields["Access-Token"] as Any], forUserAccount: "user")
-                } catch let error as NSError {
-                    print(error)
-                }
-                
-                do {
-                    try Locksmith.updateData(data: ["Client": response.response?.allHeaderFields["Client"] as Any], forUserAccount: "user")
-                } catch let error as NSError {
-                    print(error)
-                }
-                
-                do {
-                    try Locksmith.updateData(data: ["Expiry": response.response?.allHeaderFields["Expiry"] as Any], forUserAccount: "user")
-                } catch let error as NSError {
-                    print(error)
-                }
-                
-                do {
-                    try Locksmith.updateData(data: ["uid": subdata["uid"] as Any], forUserAccount: "user")
-                } catch let error as NSError {
-                    print(error)
-                }
-                
-                do {
-                    try Locksmith.updateData(data: ["email": subdata["email"] as Any], forUserAccount: "user")
-                } catch let error as NSError {
-                    print(error)
-                }
-                
-                do {
-                    try Locksmith.updateData(data: ["name": subdata["name"] as Any], forUserAccount: "user")
+                    try Locksmith.updateData(data: [
+                        "Access-Token": response.response?.allHeaderFields["Access-Token"] as Any,
+                        "Client": response.response?.allHeaderFields["Client"] as Any,
+                        "Expiry": response.response?.allHeaderFields["Expiry"] as Any,
+                        "uid": subdata["uid"] as Any,
+                        "name": subdata["name"] as Any
+                        ], forUserAccount: "user")
                 } catch let error as NSError {
                     print(error)
                 }
@@ -113,5 +89,46 @@ class NetworkHelper {
     func signIn(email : String, password: String, completion: @escaping (Bool) -> Void) {
         
         signInOrSignUp(signIn: true, name: "", email: email, password: password, completion: completion)
+    }
+    
+    func changePassword(oldPassword: String, newPassword: String, completion: @escaping (Bool) -> Void) {
+        
+        let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
+        
+//        let params : Parameters = [
+////            "current_password":      oldPassword,
+//            "password":              newPassword,
+//            "password_confirmation": newPassword
+//        ]
+        
+        let headers : HTTPHeaders = [
+            "access-token": dictionary!["Access-Token"] as! String,
+            "client":       dictionary!["Client"] as! String,
+            "expiry":       dictionary!["Expiry"] as! String,
+            "uid":          dictionary!["uid"] as! String,
+            "token-type":   "Bearer"
+        ]
+        
+        Alamofire.request(DOMAIN + "/auth/password?password=\(newPassword)&password_confirmation=\(newPassword)", method: .put, headers: headers).responseJSON(completionHandler: { response in
+
+            switch response.result {
+            case .success(let raw):
+
+
+                let data = raw as! NSDictionary
+                self.updateAuthData(rawSuccessData: raw, response: response)
+                if data["errors"] != nil {
+                    return completion(false)
+                } else {
+
+
+                    completion(true)
+                }
+
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        })
     }
 }

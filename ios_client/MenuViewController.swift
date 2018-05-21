@@ -41,9 +41,6 @@ class MenuViewController: UIViewController {
     @IBAction func accountPressed(_ sender: Any) {
 
         let accountViewController : AccountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
-        
-//        self.navigationController?.setViewControllers([accountViewController], animated: true)
-        
         accountViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         
