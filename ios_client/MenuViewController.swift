@@ -33,7 +33,14 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func homePressed(_ sender: Any) {}
+    @IBAction func homePressed(_ sender: Any) {
+        let homeViewController : HomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        
+        homeViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        self.present(homeViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func earnFreeRidesPressed(_ sender: Any) {}
     @IBAction func chargeZootersPressed(_ sender: Any) {}
     @IBAction func requestHelmetPressed(_ sender: Any) {}
@@ -43,8 +50,6 @@ class MenuViewController: UIViewController {
         let accountViewController : AccountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
         accountViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
-        
-
         
         self.present(accountViewController, animated: true, completion: nil)
     }

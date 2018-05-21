@@ -22,6 +22,7 @@
 		13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154020B10A0B00049A60 /* MenuViewController.swift */; };
 		13A6154320B1B16800049A60 /* AddedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154220B1B16800049A60 /* AddedExtensions.swift */; };
 		13A6154620B23F3700049A60 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154520B23F3700049A60 /* ChangePasswordViewController.swift */; };
+		13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154720B2574B00049A60 /* HomeViewController.swift */; };
 		16F455420159CB9D28ADAAF6 /* Pods_ios_clientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F6C608A8C4E8CAAC5CFB9 /* Pods_ios_clientUITests.framework */; };
 		26D2380DABC739F52FA4F8D2 /* Pods_ios_clientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCDB8DFBE52BA331335FF24 /* Pods_ios_clientTests.framework */; };
 		7DCD00A02FC96175F0579B89 /* Pods_ios_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F395A7FA08042C892B283889 /* Pods_ios_client.framework */; };
@@ -69,6 +70,7 @@
 		13A6154020B10A0B00049A60 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		13A6154220B1B16800049A60 /* AddedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedExtensions.swift; sourceTree = "<group>"; };
 		13A6154520B23F3700049A60 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		13A6154720B2574B00049A60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		150A6F0F5A3DCA54C1E51EF7 /* Pods-ios_clientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_clientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_clientUITests/Pods-ios_clientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		24B906147AD19D6BEC96E45F /* Pods-ios_client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_client.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_client/Pods-ios_client.release.xcconfig"; sourceTree = "<group>"; };
 		6BCDB8DFBE52BA331335FF24 /* Pods_ios_clientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_clientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				13A6154020B10A0B00049A60 /* MenuViewController.swift */,
 				13A6154220B1B16800049A60 /* AddedExtensions.swift */,
 				13A6154520B23F3700049A60 /* ChangePasswordViewController.swift */,
+				13A6154720B2574B00049A60 /* HomeViewController.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				131543B920AF6EF4002BD3E1 /* Frameworks */,
 				131543BA20AF6EF4002BD3E1 /* Resources */,
 				F6D679DA674166C380E77950 /* [CP] Embed Pods Frameworks */,
+				F3A561C7DFA6FA8D21738A95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,6 +385,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F3A561C7DFA6FA8D21738A95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ios_client/Pods-ios_client-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios_client/Pods-ios_client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F6D679DA674166C380E77950 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,6 +441,7 @@
 				13A6154320B1B16800049A60 /* AddedExtensions.swift in Sources */,
 				13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */,
 				13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */,
+				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
 				134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */,
