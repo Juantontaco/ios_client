@@ -15,29 +15,33 @@ class NetworkHelper {
     
     func updateAuthData(rawSuccessData: Any, response: DataResponse<Any>) {
         let data = rawSuccessData as! NSDictionary
-        let subdata = data["data"] as! NSDictionary
+        let subdata = data["data"] as? NSDictionary
         print(data)
         
         do {
             let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
             
+            
+            
             if dictionary == nil {
+                
                 try Locksmith.saveData(data: [
-                    "Access-Token": response.response?.allHeaderFields["Access-Token"] as Any,
-                    "Client": response.response?.allHeaderFields["Client"] as Any,
-                    "Expiry": response.response?.allHeaderFields["Expiry"] as Any,
-                    "uid": subdata["uid"] as Any,
-                    "email": subdata["email"] as Any,
-                    "name": subdata["name"] as Any
+                    "Access-Token": response.response?.allHeaderFields["Access-Token"] as! String,
+                    "Client": response.response?.allHeaderFields["Client"] as! String,
+                    "Expiry": response.response?.allHeaderFields["Expiry"] as! String,
+                    "uid": subdata!["uid"] as! String,
+                    "email": subdata!["email"] as! String,
+                    "name": subdata!["name"] as! String
                 ], forUserAccount: "user")
             } else {
                 do {
-                    try Locksmith.updateData(data: [
-                        "Access-Token": response.response?.allHeaderFields["Access-Token"] as Any,
-                        "Client": response.response?.allHeaderFields["Client"] as Any,
-                        "Expiry": response.response?.allHeaderFields["Expiry"] as Any,
-                        "uid": subdata["uid"] as Any,
-                        "name": subdata["name"] as Any
+                    try Locksmith.saveData(data: [
+                        "Access-Token": response.response?.allHeaderFields["Access-Token"] as! String,
+                        "Client": response.response?.allHeaderFields["Client"] as! String,
+                        "Expiry": response.response?.allHeaderFields["Expiry"] as! String,
+                        "uid": dictionary!["uid"] as! String,
+                        "email": dictionary!["email"] as! String,
+                        "name": dictionary!["name"] as! String,
                         ], forUserAccount: "user")
                 } catch let error as NSError {
                     print(error)
@@ -116,8 +120,9 @@ class NetworkHelper {
 
 
                 let data = raw as! NSDictionary
-                self.updateAuthData(rawSuccessData: raw, response: response)
+                
                 if data["errors"] != nil {
+ 
                     return completion(false)
                 } else {
 
@@ -128,6 +133,61 @@ class NetworkHelper {
             case .failure(let error):
                 print(error)
                 completion(false)
+            }
+        })
+    }
+    
+    func checkIfInRide(completion: @escaping (Bool) -> Void) {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/users/check_if_in_ride.json", method: .get, headers: headers).responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["in_ride"] != nil && data["in_ride"] as! Bool == true {
+
+                    return completion(true)
+                } else {
+                    return completion(false)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        })
+    }
+    
+    func getScooters(completion: @escaping ([Scooter]) -> Void) {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/scooters.json", method: .get, headers: headers).responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["scooters"] != nil {
+
+                    let scooters : [Scooter] = {
+                        return (data["scooters"] as! [NSDictionary] ).compactMap({ scooter in
+                            return Scooter(dictionary: scooter)
+                        })
+                    }()
+                    return completion(scooters)
+                } else {
+                    return completion([])
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion([])
             }
         })
     }

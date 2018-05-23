@@ -72,6 +72,15 @@ extension UIViewController {
     
     @objc func homeButtonPressed() {
         print("home button pressed")
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+        
+        homeViewController?.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        
+        
+        self.present(homeViewController!, animated: true, completion: nil)
+        
+        self.removeFromParentViewController()
     }
     
     @objc func menuButtonPressed() {
@@ -97,5 +106,44 @@ extension UIViewController {
         }
         
         self.view.makeToast(message, duration: 3.0, position: .bottom, style: style)
+    }
+    
+    func showBlackBar(withText: String) {
+        let blackBarLabel = UILabel(frame: CGRect(x: 0, y: 75, width: self.view.bounds.width, height: 25))
+        
+        blackBarLabel.backgroundColor = .black
+        blackBarLabel.textAlignment = .center
+        blackBarLabel.font = UIFont(name: "Gill Sans", size: 15)
+        blackBarLabel.text = withText
+        blackBarLabel.textColor = .white
+        
+        self.view.addSubview(blackBarLabel)
+    }
+    
+    func showWhiteBottomBox() {
+        let heightOfBox : CGFloat = 100.0
+        
+        let view = UIView(frame: CGRect(x: 0, y: self.view.bounds.height - heightOfBox, width: self.view.bounds.width, height: heightOfBox))
+        
+        view.backgroundColor = .white
+        
+        self.view.addSubview(view)
+    }
+}
+
+extension UIImage {
+    func resizeImage(newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / self.size.width
+        let newHeight = self.size.height * scale
+        
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        
+        
+        self.draw(in: CGRect(x: 0, y: 0,width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
 }

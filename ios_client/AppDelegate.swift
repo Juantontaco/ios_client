@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        (window?.rootViewController as! UINavigationController).becomeTransparent()
         
+        LocationHelper.shared
+        
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
         
         if (dictionary != nil && dictionary!["Access-Token"] != nil) {
