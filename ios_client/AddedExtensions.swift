@@ -120,7 +120,7 @@ extension UIViewController {
         self.view.addSubview(blackBarLabel)
     }
     
-    func showWhiteBottomBox() {
+    func showWhiteBottomBox() -> UIView {
         let heightOfBox : CGFloat = 100.0
         
         let view = UIView(frame: CGRect(x: 0, y: self.view.bounds.height - heightOfBox, width: self.view.bounds.width, height: heightOfBox))
@@ -128,6 +128,23 @@ extension UIViewController {
         view.backgroundColor = .white
         
         self.view.addSubview(view)
+        
+        return view
+    }
+    
+    func fillScooterInfoBox() {
+        //TODO:: Scooter image not showing
+        
+        let whiteBoxView : UIView = showWhiteBottomBox()
+        let heightOfBox : CGFloat = whiteBoxView.bounds.height
+        
+        let scooterImageViewCGRect = CGRect(x: 0, y: self.view.bounds.height - heightOfBox, width: 70, height: 70)
+        let scooterImageView = UIImageView(frame: scooterImageViewCGRect)
+        
+        scooterImageView.image = UIImage(named: "Zooter Icon")
+        scooterImageView.image?.draw(in: scooterImageViewCGRect)
+        
+        whiteBoxView.addSubview(scooterImageView)
     }
 }
 

@@ -30,4 +30,8 @@ class Scooter {
         self.latitude = dictionary["latitude"] as! CLLocationDegrees
         self.longitude = dictionary["longitude"] as! CLLocationDegrees
     }
+    
+    var description : String {
+        return "\(self.battery) \(self.specialIDCode) lat:\(self.latitude) long:\(self.longitude)"
+    }
 }

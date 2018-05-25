@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, GMSMapViewDelegate {
 
     static var mapView : GMSMapView!
     var timer = Timer()
@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
         showMenu()
         addVerticalGradient()
         showBlackBar(withText: "$1 to start + $0.15 per minute")
+        
+        
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { t in
             
@@ -45,12 +47,16 @@ class HomeViewController: UIViewController {
         
         if HomeViewController.mapView == nil {
             HomeViewController.mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: heightOffset, width: self.view.bounds.width, height: self.view.bounds.height - heightOffset), camera: camera)
+            
+            
         }
         
-        
+        HomeViewController.mapView.delegate = self as GMSMapViewDelegate
         HomeViewController.mapView.isMyLocationEnabled = true
         
         view.addSubview(HomeViewController.mapView)
+        
+        showRolloutButton()
         
         addInScooters()
         // Do any additional setup after loading the view.
@@ -65,6 +71,17 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        let scooter : Scooter = marker.userData as! Scooter
+        
+        print(scooter.description)
+        
+//        fillScooterInfoBox()
+        
+        return true
+    }
+    
     func addInScooters() {
         NetworkHelper().getScooters(completion: { scooters in
             self.scooters = scooters
@@ -76,6 +93,7 @@ class HomeViewController: UIViewController {
                 
                 icon = icon.resizeImage(newWidth: 18.0)
                 
+                marker.userData = scooter
                 marker.icon = icon
                 marker.map = HomeViewController.mapView
             })
@@ -111,15 +129,25 @@ class HomeViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showRolloutButton() {
+        let buttonWidth : CGFloat = 140.0
+        let buttonHeight : CGFloat = 40.0
+        
+        let rolloutButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - (buttonWidth / 2), y: self.view.bounds.height - 50.0, width: buttonWidth, height: buttonHeight))
+        
+        rolloutButton.setImage(#imageLiteral(resourceName: "Roll Out Button"), for: .normal)
+        
+        rolloutButton.addTarget(self, action: #selector(rolloutButtonPressed), for: .touchUpInside)
+        
+        self.view.addSubview(rolloutButton)
     }
-    */
+    
+    @objc func rolloutButtonPressed() {
+        let qrCodeVC : QRCodeViewController = (self.storyboard?.instantiateViewController(withIdentifier: "QRCodeViewController") as! QRCodeViewController)
+        
+        qrCodeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        self.present(qrCodeVC, animated: true, completion: nil)
+    }
 
 }

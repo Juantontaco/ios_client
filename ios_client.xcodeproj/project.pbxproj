@@ -15,6 +15,7 @@
 		131543CD20AF6EF7002BD3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131543CB20AF6EF7002BD3E1 /* LaunchScreen.storyboard */; };
 		131543D820AF6EF7002BD3E1 /* ios_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131543D720AF6EF7002BD3E1 /* ios_clientTests.swift */; };
 		131543E320AF6EF7002BD3E1 /* ios_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131543E220AF6EF7002BD3E1 /* ios_clientUITests.swift */; };
+		1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA3E20B5D12B00A5C87B /* QRCodeViewController.swift */; };
 		134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* AccountViewController.swift */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
@@ -64,6 +65,7 @@
 		131543DE20AF6EF7002BD3E1 /* ios_clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_clientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		131543E220AF6EF7002BD3E1 /* ios_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_clientUITests.swift; sourceTree = "<group>"; };
 		131543E420AF6EF7002BD3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1349EA3E20B5D12B00A5C87B /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		134F809E20AFDD2500B13E64 /* ios_client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_client.entitlements; sourceTree = "<group>"; };
 		134F809F20AFE97C00B13E64 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				13D3A48520B4742C002A1DD1 /* LocationHelper.swift */,
 				13D3A48720B4C356002A1DD1 /* RideHelper.swift */,
 				13D3A48920B4EDB1002A1DD1 /* Scooter.swift */,
+				1349EA3E20B5D12B00A5C87B /* QRCodeViewController.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
+				1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */,
 				134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
