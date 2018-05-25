@@ -191,4 +191,32 @@ class NetworkHelper {
             }
         })
     }
+    
+    func getScooterBySpecialIDCode(specialIDCode: String, completion: @escaping (Scooter?) -> Void) {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/scooters/\(specialIDCode).json", method: .get, headers: headers).responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["scooter"] != nil {
+                    
+                    let scooter : Scooter = {
+                            return Scooter(dictionary: data["scooter"] as! NSDictionary)
+                    }()
+                    return completion(scooter)
+                } else {
+                    return completion(nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        })
+    }
 }

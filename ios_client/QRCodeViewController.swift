@@ -88,8 +88,6 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
         }
-        
-        dismiss(animated: true)
     }
     
     func found(code: String) {
@@ -104,6 +102,27 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         //networkhelper get scooter by special id code
         //  //set scooter on startRide VC to returned scooter
         //  //move to startRideVC
+        
+        NetworkHelper().getScooterBySpecialIDCode(specialIDCode: upperCaseCode, completion: { optScooter in
+            
+            
+            if let scooter = optScooter {
+                let startRideVC : StartRideViewController = self.storyboard?.instantiateViewController(withIdentifier: "StartRideViewController") as! StartRideViewController
+                
+                startRideVC.scooter = scooter
+                
+                startRideVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                
+                self.present(startRideVC, animated: true, completion: nil)
+            } else {
+                self.toastMessage(message: "There was an error retrieving info on this scooter.", danger: false)
+                
+                if (self.captureSession?.isRunning == false) {
+                    self.captureSession.startRunning()
+                }
+            }
+            
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {

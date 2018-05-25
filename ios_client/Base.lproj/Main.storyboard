@@ -535,5 +535,20 @@
             </objects>
             <point key="canvasLocation" x="1510" y="-74"/>
         </scene>
+        <!--Start Ride View Controller-->
+        <scene sceneID="UHm-Tg-r4p">
+            <objects>
+                <viewController storyboardIdentifier="StartRideViewController" id="DZp-Wo-Es5" customClass="StartRideViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m3M-JW-EMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mEa-Dv-DqN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2e-v5-9XQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450" y="-74"/>
+        </scene>
     </scenes>
 </document>
