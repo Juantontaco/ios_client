@@ -157,7 +157,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func showLeftBackButton() {
         
-        let backButtonRect = CGRect(x: 15, y: 25, width: 30, height: 30)
+        let backButtonRect = CGRect(x: 15, y: UIViewController.topOffset + 25, width: 30, height: 30)
         let image = UIImage(named: "backButtonLeft")
         image?.draw(in: backButtonRect)
         

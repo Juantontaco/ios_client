@@ -10,6 +10,10 @@ import UIKit
 
 class StartRideViewController: UIViewController {
     
+    @IBOutlet var scooterView : UIView!
+    @IBOutlet var idValLabel : UILabel!
+    @IBOutlet var batteryLabel : UILabel!
+    
     var scooter : Scooter! = nil
     
     override func viewDidLoad() {
@@ -17,6 +21,16 @@ class StartRideViewController: UIViewController {
 
         print(scooter.description)
         // Do any additional setup after loading the view.
+        
+        setUpBorder()
+        fillInLabels()
+        
+        addVerticleGradientTopBar()
+        showLogo()
+        showMenu()
+        showBlackBar(withText: "Let's Roll")
+        
+        showWhiteBelowBlackBar()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +38,22 @@ class StartRideViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setUpBorder() {
+        scooterView?.backgroundColor = .white
+        scooterView?.layer.borderColor = UIColor.purple.cgColor
+        scooterView?.layer.borderWidth = 2
+        scooterView?.layer.cornerRadius = 10
+    }
+    
+    func fillInLabels() {
+        idValLabel.text = scooter.specialIDCode.uppercased()
+        
+        batteryLabel.text = "\(scooter.battery!)%"
+    }
+    
+    func showWhiteBelowBlackBar() {
+        
+    }
     /*
     // MARK: - Navigation
 

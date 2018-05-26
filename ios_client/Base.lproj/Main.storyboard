@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -542,13 +544,92 @@
                     <view key="view" contentMode="scaleToFill" id="m3M-JW-EMJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-iL-95V">
+                                <rect key="frame" x="24" y="104" width="327" height="227"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zooter Icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Wf-lP-sgt">
+                                        <rect key="frame" x="8" y="30" width="131" height="167"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1Wf-lP-sgt" secondAttribute="height" multiplier="117:149" id="oru-La-CYc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyV-5I-Bby">
+                                        <rect key="frame" x="176" y="30" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oyV-5I-Bby" secondAttribute="height" multiplier="1:1" id="6Ll-0l-BVg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IDValLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z09-jA-7K6">
+                                        <rect key="frame" x="176" y="59" width="81" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="3QB-hI-LZG"/>
+                                            <constraint firstAttribute="width" secondItem="Z09-jA-7K6" secondAttribute="height" multiplier="27:7" id="vvy-f7-tAO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBm-zY-qk7">
+                                        <rect key="frame" x="176" y="139" width="56" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="VBm-zY-qk7" secondAttribute="height" multiplier="8:3" id="1pa-2I-Zpm"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="3bR-F6-Ya8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1G-os-Jrk">
+                                        <rect key="frame" x="176" y="170.5" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="IW0-mK-KJs"/>
+                                            <constraint firstAttribute="width" secondItem="v1G-os-Jrk" secondAttribute="height" multiplier="2:1" id="ka4-7X-Iws"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="v1G-os-Jrk" firstAttribute="leading" secondItem="cDc-iL-95V" secondAttribute="leading" constant="176" id="EeY-8q-AML"/>
+                                    <constraint firstItem="Z09-jA-7K6" firstAttribute="leading" secondItem="cDc-iL-95V" secondAttribute="leading" constant="176" id="LvS-WF-7iM"/>
+                                    <constraint firstItem="VBm-zY-qk7" firstAttribute="top" secondItem="Z09-jA-7K6" secondAttribute="bottom" constant="67" id="OES-d6-E0G"/>
+                                    <constraint firstItem="1Wf-lP-sgt" firstAttribute="centerY" secondItem="cDc-iL-95V" secondAttribute="centerY" id="Pgc-OG-UQZ"/>
+                                    <constraint firstItem="oyV-5I-Bby" firstAttribute="top" secondItem="cDc-iL-95V" secondAttribute="top" constant="30" id="QGo-dX-oVh"/>
+                                    <constraint firstAttribute="width" secondItem="cDc-iL-95V" secondAttribute="height" multiplier="327:227" id="Y2o-sS-d1g"/>
+                                    <constraint firstAttribute="width" constant="327" id="acl-co-Xsf"/>
+                                    <constraint firstItem="VBm-zY-qk7" firstAttribute="leading" secondItem="cDc-iL-95V" secondAttribute="leading" constant="176" id="aoI-IU-os6"/>
+                                    <constraint firstItem="1Wf-lP-sgt" firstAttribute="leading" secondItem="cDc-iL-95V" secondAttribute="leading" constant="8" id="cJ5-PU-blT"/>
+                                    <constraint firstItem="v1G-os-Jrk" firstAttribute="top" secondItem="VBm-zY-qk7" secondAttribute="bottom" constant="10.5" id="jnj-93-K7j"/>
+                                    <constraint firstItem="Z09-jA-7K6" firstAttribute="firstBaseline" secondItem="oyV-5I-Bby" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="s7h-vB-DuY"/>
+                                    <constraint firstItem="oyV-5I-Bby" firstAttribute="leading" secondItem="cDc-iL-95V" secondAttribute="leading" constant="176" id="xc3-nu-uqG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cDc-iL-95V" firstAttribute="centerX" secondItem="mEa-Dv-DqN" secondAttribute="centerX" id="QDO-Md-1VL"/>
+                            <constraint firstItem="cDc-iL-95V" firstAttribute="top" secondItem="mEa-Dv-DqN" secondAttribute="top" constant="84" id="mcM-g9-JrP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mEa-Dv-DqN"/>
                     </view>
+                    <connections>
+                        <outlet property="batteryLabel" destination="v1G-os-Jrk" id="Yjg-RG-cQr"/>
+                        <outlet property="idValLabel" destination="Z09-jA-7K6" id="5xK-d0-OiO"/>
+                        <outlet property="scooterView" destination="cDc-iL-95V" id="7hU-NX-elm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2e-v5-9XQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450" y="-74"/>
+            <point key="canvasLocation" x="2448.8000000000002" y="-74.212893553223395"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Zooter Icon" width="131" height="166"/>
+    </resources>
 </document>
