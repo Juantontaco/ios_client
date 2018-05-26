@@ -437,6 +437,46 @@
             </objects>
             <point key="canvasLocation" x="1519" y="663"/>
         </scene>
+        <!--In Ride View Controller-->
+        <scene sceneID="uxF-ia-sgV">
+            <objects>
+                <viewController storyboardIdentifier="InRideViewController" id="D8L-r3-LEq" customClass="InRideViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNZ-CZ-SKL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63U-hh-gUB">
+                                <rect key="frame" x="132" y="503" width="111" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="63U-hh-gUB" secondAttribute="height" multiplier="1:1" id="5Be-sI-W1c"/>
+                                    <constraint firstAttribute="width" constant="111" id="jEk-kw-BBH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="END">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endButtonPressed:" destination="D8L-r3-LEq" eventType="touchUpInside" id="E4k-9u-gg7"/>
+                                    <action selector="startButtonPressed:" destination="DZp-Wo-Es5" eventType="touchUpInside" id="c5Y-o7-db8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="63U-hh-gUB" firstAttribute="width" secondItem="63U-hh-gUB" secondAttribute="height" multiplier="1:1" id="ACf-0P-l7G"/>
+                            <constraint firstItem="63U-hh-gUB" firstAttribute="centerX" secondItem="k9J-dm-5Jt" secondAttribute="centerX" id="gcu-jI-orc"/>
+                            <constraint firstItem="k9J-dm-5Jt" firstAttribute="bottom" secondItem="63U-hh-gUB" secondAttribute="bottom" constant="53" id="yBk-Lx-rkH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k9J-dm-5Jt"/>
+                    </view>
+                    <connections>
+                        <outlet property="endButton" destination="63U-hh-gUB" id="fWm-sA-Odz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ase-ay-K4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="665"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qIK-kG-dV5">
             <objects>
@@ -610,10 +650,50 @@
                                     <constraint firstItem="oyV-5I-Bby" firstAttribute="leading" secondItem="cDc-iL-95V" secondAttribute="leading" constant="176" id="xc3-nu-uqG"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-xw-wPi">
+                                <rect key="frame" x="132" y="503" width="111" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oc6-xw-wPi" secondAttribute="height" multiplier="1:1" id="B4c-Qb-ep7"/>
+                                    <constraint firstAttribute="width" constant="111" id="BAV-8j-6X8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="DZp-Wo-Es5" eventType="touchUpInside" id="S4o-MW-nlJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to Begin Ride" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-Hv-zph">
+                                <rect key="frame" x="136" y="474" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="D0k-IS-1IO"/>
+                                    <constraint firstAttribute="width" secondItem="5FP-Hv-zph" secondAttribute="height" multiplier="34:7" id="qhY-LK-sqP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqm-lR-ROa">
+                                <rect key="frame" x="147" y="445" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uqm-lR-ROa" secondAttribute="height" multiplier="80:21" id="85V-uE-p0d"/>
+                                    <constraint firstAttribute="width" constant="80" id="Dy6-NL-tko"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oc6-xw-wPi" firstAttribute="centerX" secondItem="mEa-Dv-DqN" secondAttribute="centerX" id="OAF-JY-IVJ"/>
                             <constraint firstItem="cDc-iL-95V" firstAttribute="centerX" secondItem="mEa-Dv-DqN" secondAttribute="centerX" id="QDO-Md-1VL"/>
+                            <constraint firstItem="5FP-Hv-zph" firstAttribute="top" secondItem="Uqm-lR-ROa" secondAttribute="bottom" constant="8" id="TeB-gw-4TI"/>
+                            <constraint firstItem="Uqm-lR-ROa" firstAttribute="centerX" secondItem="mEa-Dv-DqN" secondAttribute="centerX" id="YFk-hh-sRI"/>
+                            <constraint firstItem="5FP-Hv-zph" firstAttribute="centerX" secondItem="mEa-Dv-DqN" secondAttribute="centerX" id="csq-NQ-mat"/>
+                            <constraint firstItem="mEa-Dv-DqN" firstAttribute="bottom" secondItem="oc6-xw-wPi" secondAttribute="bottom" constant="53" id="hcM-9h-SwQ"/>
+                            <constraint firstItem="oc6-xw-wPi" firstAttribute="top" secondItem="5FP-Hv-zph" secondAttribute="bottom" constant="8" id="i2b-F9-4uD"/>
                             <constraint firstItem="cDc-iL-95V" firstAttribute="top" secondItem="mEa-Dv-DqN" secondAttribute="top" constant="84" id="mcM-g9-JrP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mEa-Dv-DqN"/>
@@ -622,6 +702,7 @@
                         <outlet property="batteryLabel" destination="v1G-os-Jrk" id="Yjg-RG-cQr"/>
                         <outlet property="idValLabel" destination="Z09-jA-7K6" id="5xK-d0-OiO"/>
                         <outlet property="scooterView" destination="cDc-iL-95V" id="7hU-NX-elm"/>
+                        <outlet property="startButton" destination="oc6-xw-wPi" id="5j3-zv-FXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2e-v5-9XQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

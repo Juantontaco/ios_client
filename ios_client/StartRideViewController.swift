@@ -14,6 +14,8 @@ class StartRideViewController: UIViewController {
     @IBOutlet var idValLabel : UILabel!
     @IBOutlet var batteryLabel : UILabel!
     
+    @IBOutlet var startButton : UIButton!
+    
     var scooter : Scooter! = nil
     
     override func viewDidLoad() {
@@ -30,12 +32,18 @@ class StartRideViewController: UIViewController {
         showMenu()
         showBlackBar(withText: "Let's Roll")
         
-        showWhiteBelowBlackBar()
+        addRoundingToStartButton()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addRoundingToStartButton() {
+        startButton.layer.borderWidth = 2
+        startButton.layer.cornerRadius =  startButton.bounds.height / 2
+        startButton.layer.borderColor = UIColor.purple.cgColor
     }
     
     func setUpBorder() {
@@ -50,18 +58,15 @@ class StartRideViewController: UIViewController {
         
         batteryLabel.text = "\(scooter.battery!)%"
     }
-    
-    func showWhiteBelowBlackBar() {
-        
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func startButtonPressed(_ sender: Any) {
+        
+        let inRideVC : InRideViewController = self.storyboard?.instantiateViewController(withIdentifier: "InRideViewController") as! InRideViewController
+        
+        inRideVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        present(inRideVC, animated: true, completion: nil)
     }
-    */
+    
 
 }
