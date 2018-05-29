@@ -16,12 +16,14 @@ class RideHelper {
     }()
     
     var isInRide : Bool = false
+    var rideId : String!
     
-    func checkIfInRide(callback: @escaping (Bool) -> Void) {
-        NetworkHelper().checkIfInRide(completion: { inRide in
+    func checkIfInRide(callback: @escaping (Bool, String) -> Void) {
+        NetworkHelper().checkIfInRide(completion: { inRide, ride_id in
             self.isInRide = inRide
+            self.rideId = ride_id
             
-            callback(self.isInRide)
+            callback(self.isInRide, ride_id)
         })
     }
     

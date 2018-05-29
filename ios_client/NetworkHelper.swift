@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import Locksmith
+import SwiftyJSON
 
 class NetworkHelper {
     let DOMAIN = "https://ridezoot-server.herokuapp.com"
@@ -137,7 +138,7 @@ class NetworkHelper {
         })
     }
     
-    func checkIfInRide(completion: @escaping (Bool) -> Void) {
+    func checkIfInRide(completion: @escaping (Bool, String) -> Void) {
         let headers : HTTPHeaders = getHeaders()
         
         Alamofire.request(DOMAIN + "/users/check_if_in_ride.json", method: .get, headers: headers).responseJSON(completionHandler: { response in
@@ -148,16 +149,17 @@ class NetworkHelper {
                 
                 let data = raw as! NSDictionary
                 
-                if data["in_ride"] != nil && data["in_ride"] as! Bool == true {
+                if data["in_ride"] != nil && data["in_ride"] as! Bool == true && data["ride_id"] != nil && (data["ride_id"] as? String) != nil {
 
-                    return completion(true)
+                    let rideId : String = data["ride_id"] as! String
+                    return completion(true, rideId)
                 } else {
-                    return completion(false)
+                    return completion(false, "")
                 }
                 
             case .failure(let error):
                 print(error)
-                completion(false)
+                completion(false, "")
             }
         })
     }
@@ -218,4 +220,140 @@ class NetworkHelper {
             }
         })
     }
+    
+    func startRide(scooterSpecialIDCode: String, chosenPaymentSourceId: String, completion: @escaping (String?) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/rides/create/\(scooterSpecialIDCode)/\(chosenPaymentSourceId).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["id"] != nil && (data["id"] as? Int) != nil {
+                    let rideId : Int = (data["id"] as! Int)
+                    return completion(String(rideId))
+                } else {
+                    return completion(nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        })
+    }
+    
+    func endRide(rideId : String, completion: @escaping (NSDictionary?, Double?) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+    
+        Alamofire.request(DOMAIN + "/rides/stop/\(rideId).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+    
+            switch response.result {
+                case .success(let raw):
+    
+    
+                    let data = raw as! NSDictionary
+    
+                    if data["ride"] != nil && (data["ride"] as? NSDictionary) != nil && data["calculated_cost"] != nil && (data["calculated_cost"] as? Int) != nil {
+                        return completion(data["ride"] as? NSDictionary, (data["calculated_cost"] as? Double)! / 100.0)
+                    } else {
+                        return completion(nil, nil)
+                    }
+    
+                case .failure(let error):
+                    print(error)
+                    completion(nil, nil)
+            }
+        })
+    }
+    
+    func pingRide(rideId : String, completion: @escaping (Bool) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/rides/ping/\(rideId).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["success"] != nil && data["success"] as! Bool {
+
+                    return completion(true)
+                } else {
+                    return completion(false)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        })
+    }
+    
+    func addPaymentSource(sourceID: String, completion: @escaping (Bool) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/charges/add_source/\(sourceID).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["success"] != nil && data["success"] as! Bool {
+                    
+                    return completion(true)
+                } else {
+                    return completion(false)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        })
+    }
+    
+    func getPaymentSources(completion: @escaping ([PaymentSource]?) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/charges/sources.json", method: .get, headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(_):
+                
+//                var json : JSON!
+//                do {
+//
+//                } catch {
+//                    return completion(false)
+//                }
+                let json = JSON(response.result.value as Any)
+                
+                if let sources = json["sources"]["data"].array {
+                    let actualSources : [PaymentSource] = sources.compactMap({ sourcesJSON in
+                        
+                        return PaymentSource(json: sourcesJSON)
+                    })
+                    
+                    
+                    
+                    return completion(actualSources)
+                } else {
+                    return completion(nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        })
+    }
+    
 }

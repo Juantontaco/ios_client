@@ -54,7 +54,14 @@ class MenuViewController: UIViewController {
         self.present(accountViewController, animated: true, completion: nil)
     }
     
-    @IBAction func paymentPressed(_ sender: Any) {}
+    @IBAction func paymentPressed(_ sender: Any) {
+        
+        let paymentSourcesVC : PaymentSourcesViewController = self.storyboard?.instantiateViewController(withIdentifier: "PaymentSourcesViewController") as! PaymentSourcesViewController
+        
+        paymentSourcesVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        present(paymentSourcesVC, animated: true, completion: nil)
+    }
     @IBAction func howToPressed(_ sender: Any) {}
     @IBAction func safetyPressed(_ sender: Any) {}
     @IBAction func historyPressed(_ sender: Any) {}

@@ -16,6 +16,8 @@ class InRideViewController: UIViewController {
     var timer = Timer()
     
     @IBOutlet var endButton : UIButton!
+    
+    var rideId : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,5 +112,29 @@ class InRideViewController: UIViewController {
     }
     
     @IBAction func endButtonPressed(_ sender: Any) {
+        
+        NetworkHelper().endRide(rideId: self.rideId!, completion: { (rideDictionary : NSDictionary?, cost: Double?) in
+            
+            if rideDictionary != nil && cost != nil {
+                self.toastMessage(message: "\(cost!)", danger: false)
+                
+                self.goToRideSummaryVC(cost: cost!)
+                
+            } else {
+                self.toastMessage(message: "There was an error ending the ride.", danger: true)
+            }
+        })
+    }
+    
+    func goToRideSummaryVC(cost: Double) {
+        let rideSummaryVC : RideSummaryViewController = self.storyboard?.instantiateViewController(withIdentifier: "RideSummaryViewController") as! RideSummaryViewController
+        
+        rideSummaryVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        rideSummaryVC.cost = cost
+        rideSummaryVC.scooterId = "NA now"
+        rideSummaryVC.rideId = self.rideId
+        
+        present(rideSummaryVC, animated: true, completion: nil)
     }
 }

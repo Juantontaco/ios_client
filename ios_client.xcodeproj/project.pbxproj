@@ -15,9 +15,14 @@
 		131543CD20AF6EF7002BD3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131543CB20AF6EF7002BD3E1 /* LaunchScreen.storyboard */; };
 		131543D820AF6EF7002BD3E1 /* ios_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131543D720AF6EF7002BD3E1 /* ios_clientTests.swift */; };
 		131543E320AF6EF7002BD3E1 /* ios_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131543E220AF6EF7002BD3E1 /* ios_clientUITests.swift */; };
+		1321953C20BB7DD80010A0F6 /* PaymentSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321953B20BB7DD80010A0F6 /* PaymentSource.swift */; };
+		1321953E20BC4FE20010A0F6 /* SelectPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321953D20BC4FE20010A0F6 /* SelectPaymentViewController.swift */; };
+		1321954020BCA6EA0010A0F6 /* RideSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321953F20BCA6EA0010A0F6 /* RideSummaryViewController.swift */; };
 		1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA3E20B5D12B00A5C87B /* QRCodeViewController.swift */; };
 		1349EA4120B86DF100A5C87B /* StartRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4020B86DF100A5C87B /* StartRideViewController.swift */; };
 		1349EA4320B9B5FD00A5C87B /* InRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4220B9B5FD00A5C87B /* InRideViewController.swift */; };
+		1349EA4520B9E5A700A5C87B /* AddPaymentSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4420B9E5A700A5C87B /* AddPaymentSourceViewController.swift */; };
+		1349EA4720BA207C00A5C87B /* PaymentSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */; };
 		134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* AccountViewController.swift */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
@@ -67,9 +72,14 @@
 		131543DE20AF6EF7002BD3E1 /* ios_clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_clientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		131543E220AF6EF7002BD3E1 /* ios_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_clientUITests.swift; sourceTree = "<group>"; };
 		131543E420AF6EF7002BD3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1321953B20BB7DD80010A0F6 /* PaymentSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSource.swift; sourceTree = "<group>"; };
+		1321953D20BC4FE20010A0F6 /* SelectPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaymentViewController.swift; sourceTree = "<group>"; };
+		1321953F20BCA6EA0010A0F6 /* RideSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSummaryViewController.swift; sourceTree = "<group>"; };
 		1349EA3E20B5D12B00A5C87B /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		1349EA4020B86DF100A5C87B /* StartRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRideViewController.swift; sourceTree = "<group>"; };
 		1349EA4220B9B5FD00A5C87B /* InRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InRideViewController.swift; sourceTree = "<group>"; };
+		1349EA4420B9E5A700A5C87B /* AddPaymentSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentSourceViewController.swift; sourceTree = "<group>"; };
+		1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSourcesViewController.swift; sourceTree = "<group>"; };
 		134F809E20AFDD2500B13E64 /* ios_client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_client.entitlements; sourceTree = "<group>"; };
 		134F809F20AFE97C00B13E64 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +174,11 @@
 				1349EA3E20B5D12B00A5C87B /* QRCodeViewController.swift */,
 				1349EA4020B86DF100A5C87B /* StartRideViewController.swift */,
 				1349EA4220B9B5FD00A5C87B /* InRideViewController.swift */,
+				1349EA4420B9E5A700A5C87B /* AddPaymentSourceViewController.swift */,
+				1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */,
+				1321953B20BB7DD80010A0F6 /* PaymentSource.swift */,
+				1321953D20BC4FE20010A0F6 /* SelectPaymentViewController.swift */,
+				1321953F20BCA6EA0010A0F6 /* RideSummaryViewController.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -429,12 +444,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios_client/Pods-ios_client-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,14 +471,19 @@
 				13D3A48620B4742C002A1DD1 /* LocationHelper.swift in Sources */,
 				131543C220AF6EF4002BD3E1 /* LoginViewController.swift in Sources */,
 				131543C820AF6EF4002BD3E1 /* ios_client.xcdatamodeld in Sources */,
+				1321953C20BB7DD80010A0F6 /* PaymentSource.swift in Sources */,
 				13A6154620B23F3700049A60 /* ChangePasswordViewController.swift in Sources */,
+				1349EA4520B9E5A700A5C87B /* AddPaymentSourceViewController.swift in Sources */,
 				13D3A48A20B4EDB1002A1DD1 /* Scooter.swift in Sources */,
 				13D3A48820B4C356002A1DD1 /* RideHelper.swift in Sources */,
 				13A6154320B1B16800049A60 /* AddedExtensions.swift in Sources */,
 				13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */,
+				1321954020BCA6EA0010A0F6 /* RideSummaryViewController.swift in Sources */,
 				13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */,
+				1321953E20BC4FE20010A0F6 /* SelectPaymentViewController.swift in Sources */,
 				1349EA4120B86DF100A5C87B /* StartRideViewController.swift in Sources */,
 				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,
+				1349EA4720BA207C00A5C87B /* PaymentSourcesViewController.swift in Sources */,
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
 				1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */,

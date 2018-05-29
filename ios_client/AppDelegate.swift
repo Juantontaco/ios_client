@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Locksmith
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 //        (window?.rootViewController as! UINavigationController).becomeTransparent()
+        
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_kqpRhfWQYjvyIUjHghs41Nab"
         
         LocationHelper.shared
         

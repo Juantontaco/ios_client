@@ -11,6 +11,8 @@ target 'ios_client' do
   pod 'Toast-Swift', '~> 3.0.1'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Stripe'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'ios_clientTests' do
     inherit! :search_paths

@@ -61,11 +61,13 @@ class StartRideViewController: UIViewController {
 
     @IBAction func startButtonPressed(_ sender: Any) {
         
-        let inRideVC : InRideViewController = self.storyboard?.instantiateViewController(withIdentifier: "InRideViewController") as! InRideViewController
+        let selectPaymentMethodVC : SelectPaymentViewController = self.storyboard?.instantiateViewController(withIdentifier: "SelectPaymentViewController") as! SelectPaymentViewController
         
-        inRideVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        selectPaymentMethodVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
-        present(inRideVC, animated: true, completion: nil)
+        selectPaymentMethodVC.scooterId = scooter.specialIDCode.uppercased()
+        
+        self.present(selectPaymentMethodVC, animated: true, completion: nil)
     }
     
 
