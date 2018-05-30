@@ -12,17 +12,22 @@ import GooglePlaces
 
 class InRideViewController: UIViewController {
     
-    static var mapView : GMSMapView!
     var timer = Timer()
     
     @IBOutlet var endButton : UIButton!
     
     var rideId : String?
+    
+    var pingTimer: Timer!
+    var pingLocations: [CLLocation] = []
+    var needToResume : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if needToResume {
+            prependPreviousPingLocations()
+        }
         
         showLogo()
         addVerticleGradientTopBar()
@@ -31,6 +36,17 @@ class InRideViewController: UIViewController {
         setUpMap()
         
         showEndButton()
+        setUpPingTimer()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if needToResume {
+            toastMessage(message: "Moved Back to Current Ride!", danger: false)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        HomeViewController.mapView.clear()
     }
     
     func setUpMap() {
@@ -62,9 +78,9 @@ class InRideViewController: UIViewController {
         
         
         HomeViewController.mapView.clear()
-    HomeViewController.mapView.isMyLocationEnabled = true
+        HomeViewController.mapView.isMyLocationEnabled = true
         
-    view.addSubview(HomeViewController.mapView)
+        view.addSubview(HomeViewController.mapView)
         
     }
     
@@ -113,10 +129,12 @@ class InRideViewController: UIViewController {
     
     @IBAction func endButtonPressed(_ sender: Any) {
         
+        
+        
         NetworkHelper().endRide(rideId: self.rideId!, completion: { (rideDictionary : NSDictionary?, cost: Double?) in
             
             if rideDictionary != nil && cost != nil {
-                self.toastMessage(message: "\(cost!)", danger: false)
+                self.destructPingTimer()
                 
                 self.goToRideSummaryVC(cost: cost!)
                 
@@ -124,6 +142,71 @@ class InRideViewController: UIViewController {
                 self.toastMessage(message: "There was an error ending the ride.", danger: true)
             }
         })
+    }
+    
+    func setUpPingTimer() {
+        self.pingTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true, block: { t in
+            
+            self.pingLocation()
+        })
+    }
+    
+    func destructPingTimer() {
+        self.pingTimer.invalidate()
+        self.pingTimer = nil
+    }
+    
+    func pingLocation() {
+        if let currLocation : CLLocation = LocationHelper.shared.currentLocation {
+            
+            HomeViewController.mapView.animate(toLocation: currLocation.coordinate)
+            pingLocations.append(currLocation)
+            markLocationsOnMap()
+            
+            NetworkHelper().pingRide(rideId: rideId!, latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude, completion: { didWork in
+                
+                if didWork {
+                    print("location pinged")
+                } else {
+                    print("Problem getting current location to ping - in response")
+                }
+            })
+        } else {
+            print("Problem getting current location to ping")
+        }
+    }
+    
+    func markLocationsOnMap() {
+        HomeViewController.mapView.clear()
+        
+        let path = GMSMutablePath()
+        
+        pingLocations.forEach { (location) in
+            path.add(location.coordinate)
+        }
+        
+        let polyline = GMSPolyline(path: path)
+        polyline.strokeColor = UIColor(red:0.67, green:0.33, blue:0.79, alpha:1.0)
+        polyline.strokeWidth = 5
+        polyline.map = HomeViewController.mapView
+    }
+    
+    func prependPreviousPingLocations() {
+        NetworkHelper().getRide(rideId: rideId!, completion: { rideDictionary, incPingLocations in
+            
+            if incPingLocations != nil {
+                incPingLocations!.forEach({ pingLocationJSON in
+                    
+                    let loc : CLLocation = CLLocation(latitude: CLLocationDegrees(exactly: pingLocationJSON["latitude"].doubleValue)!, longitude: CLLocationDegrees(exactly: pingLocationJSON["longitude"].doubleValue)!)
+                    
+                    self.pingLocations.insert(loc, at: 0)
+                })
+                
+                self.markLocationsOnMap()
+            } else {
+                print("There was an error receiving old ping locations from server")
+            }
+            })
     }
     
     func goToRideSummaryVC(cost: Double) {

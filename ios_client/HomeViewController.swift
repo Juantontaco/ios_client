@@ -84,6 +84,9 @@ class HomeViewController: UIViewController, GMSMapViewDelegate {
     
     func addInScooters() {
         NetworkHelper().getScooters(completion: { scooters in
+            
+            HomeViewController.mapView.clear()
+            
             self.scooters = scooters
             self.scooters.forEach({ scooter in
                 let marker = GMSMarker()

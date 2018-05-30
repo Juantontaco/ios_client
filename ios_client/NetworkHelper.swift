@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import Locksmith
 import SwiftyJSON
+import CoreLocation
 
 class NetworkHelper {
     let DOMAIN = "https://ridezoot-server.herokuapp.com"
@@ -149,9 +150,9 @@ class NetworkHelper {
                 
                 let data = raw as! NSDictionary
                 
-                if data["in_ride"] != nil && data["in_ride"] as! Bool == true && data["ride_id"] != nil && (data["ride_id"] as? String) != nil {
+                if data["in_ride"] != nil && data["in_ride"] as! Bool == true && data["ride_id"] != nil && (data["ride_id"] as? Int) != nil {
 
-                    let rideId : String = data["ride_id"] as! String
+                    let rideId : String = String(data["ride_id"] as! Int)
                     return completion(true, rideId)
                 } else {
                     return completion(false, "")
@@ -270,10 +271,12 @@ class NetworkHelper {
         })
     }
     
-    func pingRide(rideId : String, completion: @escaping (Bool) -> Void) -> Void {
+    func pingRide(rideId : String, latitude: CLLocationDegrees, longitude: CLLocationDegrees, completion: @escaping (Bool) -> Void) -> Void {
         let headers : HTTPHeaders = getHeaders()
         
-        Alamofire.request(DOMAIN + "/rides/ping/\(rideId).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+        let params : Parameters = ["latitude": latitude, "longitude": longitude]
+        
+        Alamofire.request(DOMAIN + "/rides/ping/\(rideId).json", method: .post, parameters: params, headers: headers).validate().responseJSON(completionHandler: { response in
             
             switch response.result {
             case .success(let raw):
@@ -291,6 +294,33 @@ class NetworkHelper {
             case .failure(let error):
                 print(error)
                 completion(false)
+            }
+        })
+    }
+    
+    func getRide(rideId : String, completion: @escaping ([String : Any]?, [JSON]?) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/rides/show/\(rideId).json", method: .get,  headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(_):
+                
+                let json = JSON(response.result.value as Any)
+                
+                if let ride = json["ride"].dictionaryObject {
+                    if let pingLocations = json["ride_ping_locations"].array {
+                        return completion(ride, pingLocations)
+                    }
+                    
+                    return completion(nil, nil)
+                } else {
+                    return completion(nil, nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil, nil)
             }
         })
     }

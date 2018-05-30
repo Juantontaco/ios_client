@@ -38,6 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
+        NetworkHelper().checkIfInRide(completion: {isInRide, rideId in
+            if isInRide {
+                let inRideVC : InRideViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InRideViewController") as? InRideViewController)!
+                
+                inRideVC.rideId = rideId
+                inRideVC.needToResume = true
+                
+                self.window?.rootViewController = inRideVC
+            }
+            })
+        
         return true
     }
 
