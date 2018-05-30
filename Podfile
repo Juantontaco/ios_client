@@ -13,6 +13,7 @@ target 'ios_client' do
   pod 'GooglePlaces'
   pod 'Stripe'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Cosmos', '~> 16.0'
 
   target 'ios_clientTests' do
     inherit! :search_paths

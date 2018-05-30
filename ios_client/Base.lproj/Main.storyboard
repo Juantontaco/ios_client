@@ -663,56 +663,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="costLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-Ob-AWl">
-                                <rect key="frame" x="150" y="135" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="costLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-Ob-AWl">
+                                <rect key="frame" x="16" y="188" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VPe-Ob-AWl" secondAttribute="height" multiplier="49:3" id="93U-au-2py"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFW-WN-gjh">
-                                <rect key="frame" x="150" y="106" width="41" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How was your experience?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRj-8R-k54">
+                                <rect key="frame" x="60" y="226" width="254" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sRj-8R-k54" secondAttribute="height" multiplier="254:27" id="M0K-4I-dE0"/>
+                                    <constraint firstAttribute="width" constant="254" id="s36-9Z-KUi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rideidlable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gM-mo-tNd">
-                                <rect key="frame" x="150" y="210" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ride id:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9B-wz-9he">
-                                <rect key="frame" x="150" y="181" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scooteridlabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fk-vn-ZdS">
-                                <rect key="frame" x="150" y="297" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scooter id:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQ5-Jr-At8">
-                                <rect key="frame" x="150" y="268" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Yg-HR-IOK">
+                                <rect key="frame" x="16" y="366" width="343" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="ICf-Ga-qL1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96B-sX-cWn">
+                                <rect key="frame" x="132" y="500" width="111" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="5cS-1Q-Czn"/>
+                                    <constraint firstAttribute="width" secondItem="96B-sX-cWn" secondAttribute="height" multiplier="1:1" id="RFL-M7-cON"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endButtonPressed:" destination="D8L-r3-LEq" eventType="touchUpInside" id="hZh-Ae-F5x"/>
+                                    <action selector="startButtonPressed:" destination="DZp-Wo-Es5" eventType="touchUpInside" id="Yk5-Ru-T0u"/>
+                                    <action selector="submitButtonPressed:" destination="kfR-BU-cPS" eventType="touchUpInside" id="my5-fW-Yqc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Leave a comment..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVg-c6-ySn">
+                                <rect key="frame" x="16" y="366" width="343" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="IDr-6G-SlS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.55216796875000007" green="0.55216796875000007" blue="0.55216796875000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="96B-sX-cWn" firstAttribute="centerX" secondItem="Pz1-Xv-xF7" secondAttribute="centerX" id="7e5-zs-x2H"/>
+                            <constraint firstItem="96B-sX-cWn" firstAttribute="width" secondItem="96B-sX-cWn" secondAttribute="height" multiplier="1:1" id="CKz-j5-7uw"/>
+                            <constraint firstItem="EVg-c6-ySn" firstAttribute="leading" secondItem="Pz1-Xv-xF7" secondAttribute="leading" constant="16" id="DKl-Kg-5jc"/>
+                            <constraint firstItem="VPe-Ob-AWl" firstAttribute="leading" secondItem="Pz1-Xv-xF7" secondAttribute="leading" constant="16" id="Fsg-Vd-Dte"/>
+                            <constraint firstItem="sRj-8R-k54" firstAttribute="top" secondItem="VPe-Ob-AWl" secondAttribute="bottom" constant="17" id="H7Y-PK-LTr"/>
+                            <constraint firstItem="3Yg-HR-IOK" firstAttribute="leading" secondItem="Pz1-Xv-xF7" secondAttribute="leading" constant="16" id="OOa-S1-FK5"/>
+                            <constraint firstItem="96B-sX-cWn" firstAttribute="width" secondItem="96B-sX-cWn" secondAttribute="height" multiplier="1:1" id="Oze-zO-0R4"/>
+                            <constraint firstItem="Pz1-Xv-xF7" firstAttribute="trailing" secondItem="EVg-c6-ySn" secondAttribute="trailing" constant="16" id="Rrw-qQ-7s0"/>
+                            <constraint firstItem="sRj-8R-k54" firstAttribute="centerX" secondItem="Pz1-Xv-xF7" secondAttribute="centerX" id="dH6-Eu-GHc"/>
+                            <constraint firstItem="Pz1-Xv-xF7" firstAttribute="trailing" secondItem="VPe-Ob-AWl" secondAttribute="trailing" constant="16" id="eNA-GC-XZV"/>
+                            <constraint firstItem="96B-sX-cWn" firstAttribute="top" secondItem="EVg-c6-ySn" secondAttribute="bottom" constant="96" id="nGH-KN-AQR"/>
+                            <constraint firstItem="Pz1-Xv-xF7" firstAttribute="trailing" secondItem="3Yg-HR-IOK" secondAttribute="trailing" constant="16" id="rI3-cL-bMk"/>
+                            <constraint firstItem="VPe-Ob-AWl" firstAttribute="top" secondItem="Pz1-Xv-xF7" secondAttribute="top" constant="168" id="u4s-jj-raT"/>
+                            <constraint firstItem="96B-sX-cWn" firstAttribute="top" secondItem="3Yg-HR-IOK" secondAttribute="bottom" constant="22" id="vSy-DZ-Coc"/>
+                            <constraint firstItem="Pz1-Xv-xF7" firstAttribute="bottom" secondItem="96B-sX-cWn" secondAttribute="bottom" constant="56" id="wpM-uR-23P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pz1-Xv-xF7"/>
                     </view>
                     <connections>
+                        <outlet property="commentTextView" destination="3Yg-HR-IOK" id="0T9-Ew-0Ee"/>
                         <outlet property="costLabel" destination="VPe-Ob-AWl" id="vdb-xR-Bxg"/>
-                        <outlet property="rideIdLabel" destination="7gM-mo-tNd" id="hLJ-KH-Zxk"/>
-                        <outlet property="scooterIdLabel" destination="5fk-vn-ZdS" id="wDp-8e-zW4"/>
+                        <outlet property="placeholderLabel" destination="EVg-c6-ySn" id="ChA-BS-9Dx"/>
+                        <outlet property="submitButton" destination="96B-sX-cWn" id="Azl-eV-tgT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EJ-cf-8Db" userLabel="First Responder" sceneMemberID="firstResponder"/>

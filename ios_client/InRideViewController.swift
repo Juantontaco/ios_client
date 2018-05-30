@@ -215,7 +215,7 @@ class InRideViewController: UIViewController {
         rideSummaryVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         rideSummaryVC.cost = cost
-        rideSummaryVC.scooterId = "NA now"
+//        rideSummaryVC.scooterId = "NA now"
         rideSummaryVC.rideId = self.rideId
         
         present(rideSummaryVC, animated: true, completion: nil)

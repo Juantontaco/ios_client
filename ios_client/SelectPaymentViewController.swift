@@ -101,6 +101,10 @@ class SelectPaymentViewController: UIViewController, UITableViewDelegate, UITabl
         if freezeTable {
             return
         }
+        if sources.count == 0 {
+            return
+        }
+        
         freezeTable = true
         
         let selectedPaymentSource : PaymentSource = sources[indexPath.row]
