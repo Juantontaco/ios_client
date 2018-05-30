@@ -325,6 +325,55 @@ class NetworkHelper {
         })
     }
     
+    func getAllMyRides(completion: @escaping ([JSON]?) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/rides.json", method: .get,  headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(_):
+                
+                let json = JSON(response.result.value as Any)
+                
+                if let rides = json["rides"].array {
+                    return completion(rides)
+                } else {
+                    return completion(nil)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        })
+    }
+    
+    func commentOnRide(rideId : String, star_count: Int, comment: String, completion: @escaping (Bool?) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        let params : Parameters = ["star_count" : star_count, "comment": comment]
+        
+        Alamofire.request(DOMAIN + "/rides/comment/\(rideId).json", method: .post, parameters: params, headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                let data = raw as! NSDictionary
+                
+                if data["success"] != nil && data["success"] as! Bool {
+                    
+                    return completion(true)
+                } else {
+                    return completion(false)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        })
+    }
+    
     func addPaymentSource(sourceID: String, completion: @escaping (Bool) -> Void) -> Void {
         let headers : HTTPHeaders = getHeaders()
         

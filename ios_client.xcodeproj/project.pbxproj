@@ -24,6 +24,7 @@
 		1349EA4520B9E5A700A5C87B /* AddPaymentSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4420B9E5A700A5C87B /* AddPaymentSourceViewController.swift */; };
 		1349EA4720BA207C00A5C87B /* PaymentSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */; };
 		134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* AccountViewController.swift */; };
+		135D8C9520BF40BA009C22BD /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9420BF40BA009C22BD /* HistoryViewController.swift */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
 		13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154020B10A0B00049A60 /* MenuViewController.swift */; };
@@ -82,6 +83,7 @@
 		1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSourcesViewController.swift; sourceTree = "<group>"; };
 		134F809E20AFDD2500B13E64 /* ios_client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_client.entitlements; sourceTree = "<group>"; };
 		134F809F20AFE97C00B13E64 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		135D8C9420BF40BA009C22BD /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		13A6154020B10A0B00049A60 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				1321953B20BB7DD80010A0F6 /* PaymentSource.swift */,
 				1321953D20BC4FE20010A0F6 /* SelectPaymentViewController.swift */,
 				1321953F20BCA6EA0010A0F6 /* RideSummaryViewController.swift */,
+				135D8C9420BF40BA009C22BD /* HistoryViewController.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				131543C820AF6EF4002BD3E1 /* ios_client.xcdatamodeld in Sources */,
 				1321953C20BB7DD80010A0F6 /* PaymentSource.swift in Sources */,
 				13A6154620B23F3700049A60 /* ChangePasswordViewController.swift in Sources */,
+				135D8C9520BF40BA009C22BD /* HistoryViewController.swift in Sources */,
 				1349EA4520B9E5A700A5C87B /* AddPaymentSourceViewController.swift in Sources */,
 				13D3A48A20B4EDB1002A1DD1 /* Scooter.swift in Sources */,
 				13D3A48820B4C356002A1DD1 /* RideHelper.swift in Sources */,

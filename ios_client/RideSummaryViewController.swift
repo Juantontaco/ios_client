@@ -92,9 +92,32 @@ class RideSummaryViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
+        self.submitButton.isEnabled = false
+        
+        let ratingAsInt : Int = Int(self.rating)
         
         print(self.commentTextView.text)
         print(self.rating)
+        print(ratingAsInt)
+        
+        NetworkHelper().commentOnRide(rideId: self.rideId, star_count: ratingAsInt, comment: self.commentTextView.text, completion: { didWork in
+            
+            if didWork != nil {
+                if didWork! {
+                    let homeVC : HomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                    
+                    homeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                    
+                    self.present(homeVC, animated: true, completion: nil)
+                } else {
+                    self.toastMessage(message: "Error submitting button.", danger: false)
+                }
+            } else {
+                self.toastMessage(message: "Error submitting button.", danger: false)
+            }
+            
+            self.submitButton.isEnabled = true
+        })
     }
     
 

@@ -62,6 +62,10 @@ class HomeViewController: UIViewController, GMSMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        HomeViewController.mapView.delegate = self
+    }
+    
     deinit {
         self.scooters = nil
     }

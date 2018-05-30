@@ -64,7 +64,13 @@ class MenuViewController: UIViewController {
     }
     @IBAction func howToPressed(_ sender: Any) {}
     @IBAction func safetyPressed(_ sender: Any) {}
-    @IBAction func historyPressed(_ sender: Any) {}
+    @IBAction func historyPressed(_ sender: Any) {
+        let historyVC : HistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        
+        historyVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        present(historyVC, animated: true, completion: nil)
+    }
     @IBAction func settingsPressed(_ sender: Any) {}
     
     

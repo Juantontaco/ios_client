@@ -20,9 +20,14 @@ class SelectPaymentViewController: UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setUpTableView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setUpTableView()
+        addVerticalGradient()
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
