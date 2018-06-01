@@ -105,5 +105,18 @@ class CustomFormViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         requestButton.setTitle("Request Helmet", for: .normal)
     }
+    
+    @IBAction func requestButtonPressed(_ sender: Any) {
+        
+        let postCustomFormVC : PostCustomFormViewController = self.storyboard?.instantiateViewController(withIdentifier: "PostCustomFormViewController") as! PostCustomFormViewController
+        
+        postCustomFormVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        postCustomFormVC.isForCharger = self.isForCharger
+        postCustomFormVC.isForHelmet = self.isForHelment
+        
+        present(postCustomFormVC, animated: true, completion: nil)
+    }
+    
 
 }

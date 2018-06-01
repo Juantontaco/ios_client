@@ -26,6 +26,7 @@
 		134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* AccountViewController.swift */; };
 		135D8C9520BF40BA009C22BD /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9420BF40BA009C22BD /* HistoryViewController.swift */; };
 		135D8C9720C142BE009C22BD /* CustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9620C142BE009C22BD /* CustomFormViewController.swift */; };
+		135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
 		13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154020B10A0B00049A60 /* MenuViewController.swift */; };
@@ -86,6 +87,7 @@
 		134F809F20AFE97C00B13E64 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		135D8C9420BF40BA009C22BD /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		135D8C9620C142BE009C22BD /* CustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormViewController.swift; sourceTree = "<group>"; };
+		135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomFormViewController.swift; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		13A6154020B10A0B00049A60 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				1321953F20BCA6EA0010A0F6 /* RideSummaryViewController.swift */,
 				135D8C9420BF40BA009C22BD /* HistoryViewController.swift */,
 				135D8C9620C142BE009C22BD /* CustomFormViewController.swift */,
+				135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
 				1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */,
+				135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */,
 				134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */,
 				1349EA4320B9B5FD00A5C87B /* InRideViewController.swift in Sources */,
 			);
