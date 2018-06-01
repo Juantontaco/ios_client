@@ -42,8 +42,22 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func earnFreeRidesPressed(_ sender: Any) {}
-    @IBAction func chargeZootersPressed(_ sender: Any) {}
-    @IBAction func requestHelmetPressed(_ sender: Any) {}
+    @IBAction func chargeZootersPressed(_ sender: Any) {
+        let chargerVC : CustomFormViewController = self.storyboard?.instantiateViewController(withIdentifier: "CustomFormViewController") as! CustomFormViewController
+        chargerVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        chargerVC.isForCharger = true
+        chargerVC.isForHelment = false
+        
+        present(chargerVC, animated: true, completion: nil)
+    }
+    @IBAction func requestHelmetPressed(_ sender: Any) {
+        let chargerVC : CustomFormViewController = self.storyboard?.instantiateViewController(withIdentifier: "CustomFormViewController") as! CustomFormViewController
+        chargerVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        chargerVC.isForCharger = false
+        chargerVC.isForHelment = true
+        
+        present(chargerVC, animated: true, completion: nil)
+    }
     
     @IBAction func accountPressed(_ sender: Any) {
 
