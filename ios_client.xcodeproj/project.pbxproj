@@ -27,6 +27,8 @@
 		135D8C9520BF40BA009C22BD /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9420BF40BA009C22BD /* HistoryViewController.swift */; };
 		135D8C9720C142BE009C22BD /* CustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9620C142BE009C22BD /* CustomFormViewController.swift */; };
 		135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */; };
+		135D8C9B20C19B11009C22BD /* PaymentSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */; };
+		135D8C9D20C19B89009C22BD /* PaymentSourceTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
 		13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154020B10A0B00049A60 /* MenuViewController.swift */; };
@@ -88,6 +90,8 @@
 		135D8C9420BF40BA009C22BD /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		135D8C9620C142BE009C22BD /* CustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormViewController.swift; sourceTree = "<group>"; };
 		135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomFormViewController.swift; sourceTree = "<group>"; };
+		135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSourceTableViewCell.swift; sourceTree = "<group>"; };
+		135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSourceTableViewCellView.xib; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		13A6154020B10A0B00049A60 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				135D8C9420BF40BA009C22BD /* HistoryViewController.swift */,
 				135D8C9620C142BE009C22BD /* CustomFormViewController.swift */,
 				135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */,
+				135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */,
+				135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135D8C9D20C19B89009C22BD /* PaymentSourceTableViewCellView.xib in Resources */,
 				131543CD20AF6EF7002BD3E1 /* LaunchScreen.storyboard in Resources */,
 				131543CA20AF6EF7002BD3E1 /* Assets.xcassets in Resources */,
 				131543C520AF6EF4002BD3E1 /* Main.storyboard in Resources */,
@@ -493,6 +500,7 @@
 				1321954020BCA6EA0010A0F6 /* RideSummaryViewController.swift in Sources */,
 				13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */,
 				1321953E20BC4FE20010A0F6 /* SelectPaymentViewController.swift in Sources */,
+				135D8C9B20C19B11009C22BD /* PaymentSourceTableViewCell.swift in Sources */,
 				135D8C9720C142BE009C22BD /* CustomFormViewController.swift in Sources */,
 				1349EA4120B86DF100A5C87B /* StartRideViewController.swift in Sources */,
 				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,

@@ -49,6 +49,7 @@ class PaymentSourcesViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.dataSource = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
+
         self.tableView.backgroundColor = .clear
         
         loadSourcesData()
@@ -72,15 +73,18 @@ class PaymentSourcesViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
+        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         
-        if indexPath.count > 0 {
-            cell.textLabel?.text = sources?[indexPath.row].cardToString()
-            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 14)
+        if indexPath.count > 0 && sources != nil && sources.count > 0 {
+            let newCell : PaymentSourceTableViewCell = Bundle.main.loadNibNamed("PaymentSourceTableViewCellView", owner: self, options: nil)!.first as! PaymentSourceTableViewCell
             
-//            cell.detailTextLabel?.text = ""
+            newCell.paymentSource = sources[indexPath.row]
+            
+            newCell.render()
+            
+            cell = newCell
         } else {
-            cell.textLabel?.text = "Not up yet"
+            cell.textLabel?.text = "Not loaded yet, or no cards yet."
         }
         
         cell.backgroundColor = .white

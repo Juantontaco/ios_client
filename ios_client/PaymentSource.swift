@@ -11,11 +11,15 @@ import SwiftyJSON
 
 class PaymentSource {
     
-    let sourceID: String!
+    let sourceID:        String!
     let expirationMonth: String!
     let expirationYear:  String!
     let lastFourNumbers: String!
     let brand:           String!
+    
+    var isCard     = true
+    var isApplePay = false
+    var isFreeRide = false
     
     init(sourceID: String, expirationMonth: String, expirationYear: String, lastFourNumbers: String, brand: String) {
         
