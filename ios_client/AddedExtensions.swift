@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 import Toast_Swift
+import Locksmith
 
 extension UIButton {
     func addBorder() {
         layer.borderWidth = 2
         layer.cornerRadius = 15
         layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func addPurpleBorder() {
+        addBorder()
+        layer.borderColor = UIColor.purple.cgColor
     }
 }
 
@@ -76,12 +82,18 @@ extension UIViewController {
         
         logoView.frame = rect
         
-        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(homeButtonPressed))
         
-        gestureRec.numberOfTapsRequired = 1
         
-        logoView.isUserInteractionEnabled = true
-        logoView.addGestureRecognizer(gestureRec)
+        if (Locksmith.loadDataForUserAccount(userAccount: "user") != nil) && Locksmith.loadDataForUserAccount(userAccount: "user")!["Access-Token"] != nil {
+            
+            let gestureRec = UITapGestureRecognizer(target: self, action: #selector(homeButtonPressed))
+            
+            gestureRec.numberOfTapsRequired = 1
+            
+            logoView.isUserInteractionEnabled = true
+            
+            logoView.addGestureRecognizer(gestureRec)
+        }
         
         self.view.addSubview(logoView)
     }

@@ -9,6 +9,7 @@ PODS:
   - GooglePlaces (2.7.0):
     - GoogleMaps/Base (= 2.7.0)
   - Locksmith (4.0.0)
+  - Onboard (2.3.3)
   - Stripe (13.0.1)
   - SwiftyJSON (4.1.0)
   - Toast-Swift (3.0.1)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - Locksmith
+  - Onboard
   - Stripe
   - SwiftyJSON (~> 4.0)
   - Toast-Swift (~> 3.0.1)
@@ -30,6 +32,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - Locksmith
+    - Onboard
     - Stripe
     - SwiftyJSON
     - Toast-Swift
@@ -40,10 +43,11 @@ SPEC CHECKSUMS:
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   Stripe: b3c69e4a269d5ae707916a090ee54b1f6011ccd9
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 0da936c68742a11707827d5bfd3cb17c6e1f9bae
+PODFILE CHECKSUM: ef883f3910c2ca945b4252c432aa2084d66217c5
 
 COCOAPODS: 1.5.2

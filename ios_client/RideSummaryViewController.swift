@@ -34,7 +34,7 @@ class RideSummaryViewController: UIViewController, UITextViewDelegate {
         setUpStars()
         
         setUpCommentTextView()
-        drawSubmitButton()
+//        drawSubmitButton()
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,7 @@ target 'ios_client' do
   pod 'Stripe'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Cosmos', '~> 16.0'
+  pod 'Onboard'
 
   target 'ios_clientTests' do
     inherit! :search_paths

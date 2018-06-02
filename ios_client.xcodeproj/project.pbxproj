@@ -29,6 +29,8 @@
 		135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */; };
 		135D8C9B20C19B11009C22BD /* PaymentSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */; };
 		135D8C9D20C19B89009C22BD /* PaymentSourceTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */; };
+		135D8C9F20C1A927009C22BD /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9E20C1A927009C22BD /* InviteFriendsViewController.swift */; };
+		135D8CA120C1ED8C009C22BD /* HowToZootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8CA020C1ED8C009C22BD /* HowToZootViewController.swift */; };
 		13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */; };
 		13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */; };
 		13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154020B10A0B00049A60 /* MenuViewController.swift */; };
@@ -92,6 +94,8 @@
 		135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomFormViewController.swift; sourceTree = "<group>"; };
 		135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSourceTableViewCell.swift; sourceTree = "<group>"; };
 		135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSourceTableViewCellView.xib; sourceTree = "<group>"; };
+		135D8C9E20C1A927009C22BD /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
+		135D8CA020C1ED8C009C22BD /* HowToZootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToZootViewController.swift; sourceTree = "<group>"; };
 		13A2C4C620AF8DFE00BA88F8 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		13A2C4C820AFD45900BA88F8 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		13A6154020B10A0B00049A60 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */,
 				135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */,
 				135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */,
+				135D8C9E20C1A927009C22BD /* InviteFriendsViewController.swift */,
+				135D8CA020C1ED8C009C22BD /* HowToZootViewController.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -470,6 +477,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -506,7 +514,9 @@
 				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,
 				1349EA4720BA207C00A5C87B /* PaymentSourcesViewController.swift in Sources */,
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
+				135D8CA120C1ED8C009C22BD /* HowToZootViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
+				135D8C9F20C1A927009C22BD /* InviteFriendsViewController.swift in Sources */,
 				1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */,
 				135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */,
 				134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */,

@@ -24,11 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         STPPaymentConfiguration.shared().publishableKey = "pk_test_kqpRhfWQYjvyIUjHghs41Nab"
         
-        LocationHelper.shared
+        
         
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
         
         if (dictionary != nil && dictionary!["Access-Token"] != nil) {
+            
+            LocationHelper.shared
             
             let accountViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
 //            
@@ -36,18 +38,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            
             window?.rootViewController = accountViewController
             
+            NetworkHelper().checkIfInRide(completion: {isInRide, rideId in
+                if isInRide {
+                    let inRideVC : InRideViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InRideViewController") as? InRideViewController)!
+                    
+                    inRideVC.rideId = rideId
+                    inRideVC.needToResume = true
+                    
+                    self.window?.rootViewController = inRideVC
+                }
+            })
+            
         }
         
-        NetworkHelper().checkIfInRide(completion: {isInRide, rideId in
-            if isInRide {
-                let inRideVC : InRideViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InRideViewController") as? InRideViewController)!
-                
-                inRideVC.rideId = rideId
-                inRideVC.needToResume = true
-                
-                self.window?.rootViewController = inRideVC
-            }
-            })
+        
         
         return true
     }

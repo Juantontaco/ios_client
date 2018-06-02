@@ -41,7 +41,17 @@ class MenuViewController: UIViewController {
         self.present(homeViewController, animated: true, completion: nil)
     }
     
-    @IBAction func earnFreeRidesPressed(_ sender: Any) {}
+    @IBAction func zafarisButtonPressed(_ sender: Any) {
+    }
+    
+    
+    @IBAction func earnFreeRidesPressed(_ sender: Any) {
+        let inviteFriendsVC : InviteFriendsViewController = self.storyboard?.instantiateViewController(withIdentifier: "InviteFriendsViewController") as! InviteFriendsViewController
+        
+        inviteFriendsVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        present(inviteFriendsVC, animated: true, completion: nil)
+    }
     @IBAction func chargeZootersPressed(_ sender: Any) {
         let chargerVC : CustomFormViewController = self.storyboard?.instantiateViewController(withIdentifier: "CustomFormViewController") as! CustomFormViewController
         chargerVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
@@ -76,7 +86,11 @@ class MenuViewController: UIViewController {
         
         present(paymentSourcesVC, animated: true, completion: nil)
     }
-    @IBAction func howToPressed(_ sender: Any) {}
+    
+    @IBAction func howToPressed(_ sender: Any) {
+//        let vc = HowToZootViewController.
+    }
+    
     @IBAction func safetyPressed(_ sender: Any) {}
     @IBAction func historyPressed(_ sender: Any) {
         let historyVC : HistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
