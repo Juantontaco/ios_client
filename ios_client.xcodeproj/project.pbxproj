@@ -24,6 +24,8 @@
 		1349EA4520B9E5A700A5C87B /* AddPaymentSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4420B9E5A700A5C87B /* AddPaymentSourceViewController.swift */; };
 		1349EA4720BA207C00A5C87B /* PaymentSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */; };
 		134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F809F20AFE97C00B13E64 /* AccountViewController.swift */; };
+		13517DE120C3075800BD428E /* RideHistorySnippet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13517DE020C3075800BD428E /* RideHistorySnippet.xib */; };
+		13517DE320C3091E00BD428E /* RideHistorySnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13517DE220C3091E00BD428E /* RideHistorySnippetView.swift */; };
 		135D8C9520BF40BA009C22BD /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9420BF40BA009C22BD /* HistoryViewController.swift */; };
 		135D8C9720C142BE009C22BD /* CustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9620C142BE009C22BD /* CustomFormViewController.swift */; };
 		135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */; };
@@ -89,6 +91,8 @@
 		1349EA4620BA207C00A5C87B /* PaymentSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSourcesViewController.swift; sourceTree = "<group>"; };
 		134F809E20AFDD2500B13E64 /* ios_client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios_client.entitlements; sourceTree = "<group>"; };
 		134F809F20AFE97C00B13E64 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		13517DE020C3075800BD428E /* RideHistorySnippet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideHistorySnippet.xib; sourceTree = "<group>"; };
+		13517DE220C3091E00BD428E /* RideHistorySnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHistorySnippetView.swift; sourceTree = "<group>"; };
 		135D8C9420BF40BA009C22BD /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		135D8C9620C142BE009C22BD /* CustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormViewController.swift; sourceTree = "<group>"; };
 		135D8C9820C150FB009C22BD /* PostCustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomFormViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */,
 				135D8C9E20C1A927009C22BD /* InviteFriendsViewController.swift */,
 				135D8CA020C1ED8C009C22BD /* HowToZootViewController.swift */,
+				13517DE020C3075800BD428E /* RideHistorySnippet.xib */,
+				13517DE220C3091E00BD428E /* RideHistorySnippetView.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 			files = (
 				135D8C9D20C19B89009C22BD /* PaymentSourceTableViewCellView.xib in Resources */,
 				131543CD20AF6EF7002BD3E1 /* LaunchScreen.storyboard in Resources */,
+				13517DE120C3075800BD428E /* RideHistorySnippet.xib in Resources */,
 				131543CA20AF6EF7002BD3E1 /* Assets.xcassets in Resources */,
 				131543C520AF6EF4002BD3E1 /* Main.storyboard in Resources */,
 			);
@@ -466,6 +473,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios_client/Pods-ios_client-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
@@ -476,6 +484,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
@@ -509,6 +518,7 @@
 				13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */,
 				1321953E20BC4FE20010A0F6 /* SelectPaymentViewController.swift in Sources */,
 				135D8C9B20C19B11009C22BD /* PaymentSourceTableViewCell.swift in Sources */,
+				13517DE320C3091E00BD428E /* RideHistorySnippetView.swift in Sources */,
 				135D8C9720C142BE009C22BD /* CustomFormViewController.swift in Sources */,
 				1349EA4120B86DF100A5C87B /* StartRideViewController.swift in Sources */,
 				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,

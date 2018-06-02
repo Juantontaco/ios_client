@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Locksmith
 import Stripe
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 //        (window?.rootViewController as! UINavigationController).becomeTransparent()
+        
+        IQKeyboardManager.shared.enable = true
         
         STPPaymentConfiguration.shared().publishableKey = "pk_test_kqpRhfWQYjvyIUjHghs41Nab"
         

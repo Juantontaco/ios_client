@@ -15,6 +15,7 @@ target 'ios_client' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Cosmos', '~> 16.0'
   pod 'Onboard'
+  pod 'IQKeyboardManagerSwift'
 
   target 'ios_clientTests' do
     inherit! :search_paths

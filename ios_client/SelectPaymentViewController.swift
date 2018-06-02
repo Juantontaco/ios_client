@@ -74,13 +74,16 @@ class SelectPaymentViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
+        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         
         if indexPath.count > 0 {
-            cell.textLabel?.text = sources?[indexPath.row].cardToString()
-            cell.textLabel?.font = UIFont(name: "Gill Sans", size: 14)
+            let newCell : PaymentSourceTableViewCell = Bundle.main.loadNibNamed("PaymentSourceTableViewCellView", owner: self, options: nil)!.first as! PaymentSourceTableViewCell
             
-            //            cell.detailTextLabel?.text = ""
+            newCell.paymentSource = sources[indexPath.row]
+            
+            newCell.render()
+            
+            cell = newCell
         } else {
             cell.textLabel?.text = "Not up yet"
         }

@@ -13,6 +13,13 @@ import GooglePlaces
 
 class HistoryViewController: UIViewController, GMSMapViewDelegate {
     
+    @IBOutlet var specialView : UIView!
+    
+    @IBOutlet var rideIdLabel : UILabel!
+    @IBOutlet var distanceLabel : UILabel!
+    @IBOutlet var timeLabel : UILabel!
+    @IBOutlet var costLabel : UILabel!
+    
     var ridesWithRidePingLocations : [JSON]?
     var timer : Timer!
 
@@ -26,6 +33,7 @@ class HistoryViewController: UIViewController, GMSMapViewDelegate {
         showBlackBar(withText: "Ride History")
         
         getRidesWithRidePingLocations()
+        makeSpecialViewDefault()
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +71,7 @@ class HistoryViewController: UIViewController, GMSMapViewDelegate {
             polyline.strokeColor = UIColor(red:0.67, green:0.33, blue:0.79, alpha:1.0)
             polyline.strokeWidth = 5
             
-            polyline.userData = (rideWithRidePingLocation["ride"], rideWithRidePingLocation["calculated_cost"].double)
+            polyline.userData = (rideWithRidePingLocation["ride"], rideWithRidePingLocation["calculated_cost"].double, rideWithRidePingLocation["ride_ping_locations"].array)
             
             polyline.isTappable = true
             
@@ -132,11 +140,45 @@ class HistoryViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        
+        makeSpecialViewDefault()
+    }
+    
     func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
-        let rideWithCost : (JSON, Double?) = overlay.userData as! (JSON, Double?)
+        let rideWithCost : (JSON, Double?, [JSON]?) = overlay.userData as! (JSON, Double?, [JSON]?)
         
         print(rideWithCost.0)
         print(rideWithCost.1)
+        print(rideWithCost.2)
+        
+        showSpecialView(incomingRideWithCost: rideWithCost)
+    }
+    
+    func makeSpecialViewDefault() {
+        self.view.bringSubview(toFront: self.specialView)
+        self.specialView.layer.borderColor = UIColor.purple.cgColor
+        self.specialView.layer.borderWidth = 2
+        self.specialView.layer.cornerRadius = 10
+        
+        self.rideIdLabel.text = "Totals"
+    }
+    
+    func showSpecialView(incomingRideWithCost: (JSON, Double?, [JSON]?)?) {
+        
+        if incomingRideWithCost != nil {
+            self.rideIdLabel.text = "Ride ID: \(incomingRideWithCost!.0["id"])"
+            self.distanceLabel.text = "Distance: \(RideHelper().calculateRideDistance(ridePingLocations: (incomingRideWithCost?.2)!))"
+            
+            //time label
+            self.timeLabel.text = "Time: \(RideHelper().elapsedTime(ride: incomingRideWithCost!.0))"
+            
+            self.costLabel.text = String(format: "Trip Cost: $%.02f", incomingRideWithCost!.1! / 100)
+            
+            self.view.addSubview(specialView)
+        } else {
+            
+        }
     }
 
 }
