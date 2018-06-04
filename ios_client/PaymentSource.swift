@@ -49,7 +49,22 @@ class PaymentSource {
         
     }
     
+    static func freeRide() -> PaymentSource {
+        let instance = PaymentSource(sourceID: "freeride", expirationMonth: "0", expirationYear: "0", lastFourNumbers: "0000", brand: "0")
+        
+        instance.isCard = false
+        instance.isApplePay = false
+        
+        instance.isFreeRide = true
+        
+        return instance
+    }
+    
     func cardToString() -> String {
-        return "\(brand!) **** **** **** \(lastFourNumbers!) Exp: \(expirationMonth!)/\(expirationYear!)"
+        if isFreeRide {
+            return "Free Ride!"
+        } else {
+            return "\(brand!) **** **** **** \(lastFourNumbers!) Exp: \(expirationMonth!)/\(expirationYear!)"
+        }
     }
 }

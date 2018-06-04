@@ -39,7 +39,8 @@ class PaymentSourceTableViewCell: UITableViewCell {
             
             self.expirationField.text = "Exp: \(self.paymentSource.expirationMonth!)/\(self.paymentSource.expirationYear!)"
         } else if self.paymentSource.isFreeRide {
-            
+            self.last4Field.text = "Free Ride!!"
+            self.expirationField.text = ""
         } else if self.paymentSource.isApplePay {
             
         }

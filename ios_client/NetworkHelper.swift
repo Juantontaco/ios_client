@@ -399,7 +399,7 @@ class NetworkHelper {
         })
     }
     
-    func getPaymentSources(completion: @escaping ([PaymentSource]?) -> Void) -> Void {
+    func getPaymentSources(includeFreeRides: Bool, completion: @escaping ([PaymentSource]?) -> Void) -> Void {
         let headers : HTTPHeaders = getHeaders()
         
         Alamofire.request(DOMAIN + "/charges/sources.json", method: .get, headers: headers).validate().responseJSON(completionHandler: { response in
@@ -416,12 +416,19 @@ class NetworkHelper {
                 let json = JSON(response.result.value as Any)
                 
                 if let sources = json["sources"]["data"].array {
-                    let actualSources : [PaymentSource] = sources.compactMap({ sourcesJSON in
+                    var actualSources : [PaymentSource] = sources.compactMap({ sourcesJSON in
                         
                         return PaymentSource(json: sourcesJSON)
                     })
                     
-                    
+                    if includeFreeRides {
+                        if let hasFreeRide = json["has_promo_redemption"].bool {
+                            if hasFreeRide {
+                                let freeRidePaymentSource : PaymentSource = PaymentSource.freeRide()
+                                actualSources.insert(freeRidePaymentSource, at: 0)
+                            }
+                        }
+                    }
                     
                     return completion(actualSources)
                 } else {

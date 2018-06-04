@@ -56,7 +56,7 @@ class PaymentSourcesViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func loadSourcesData() {
-        NetworkHelper().getPaymentSources(completion: { paymentSources in
+        NetworkHelper().getPaymentSources(includeFreeRides: false, completion: { paymentSources in
             
             if let pSources = paymentSources {
                 self.sources = pSources
