@@ -28,20 +28,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="party" translatesAutoresizingMaskIntoConstraints="NO" id="zF9-jn-K5T">
-                                <rect key="frame" x="0.0" y="0.0" width="1277" height="721"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="721"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot logo purple" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-cy-sWv">
                                 <rect key="frame" x="125" y="13" width="124" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="bpu-vW-KiT"/>
                                     <constraint firstAttribute="height" constant="64" id="yrK-B9-BJa"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Free rides slogan" translatesAutoresizingMaskIntoConstraints="NO" id="wkC-Hb-iCo">
-                                <rect key="frame" x="16" y="165" width="343" height="357"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="357" id="ASB-kX-Gpf"/>
-                                    <constraint firstAttribute="width" constant="343" id="LMh-1d-AA8"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rv-UI-faR">
@@ -59,7 +52,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 1 = FUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-Jw-CJz">
-                                <rect key="frame" x="127" y="218" width="121" height="27"/>
+                                <rect key="frame" x="127" y="100" width="121" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="3XW-nK-sfK"/>
                                     <constraint firstAttribute="width" constant="121" id="klY-oE-Mqb"/>
@@ -68,27 +61,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atB-Dk-Aiu">
+                                <rect key="frame" x="67" y="612" width="240" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3yH-c0-Wep"/>
+                                    <constraint firstAttribute="width" constant="240" id="bwh-Mn-Mkc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="REDEEM FREE RIDES">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="redeemFreeRidesPressed:" destination="D1Z-5F-SiG" eventType="touchUpInside" id="hY7-0s-lac"/>
+                                    <action selector="sendFreeRidesButtonPressed:" destination="D1Z-5F-SiG" eventType="touchUpInside" id="pWO-Kb-U9v"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Free rides slogan" translatesAutoresizingMaskIntoConstraints="NO" id="wkC-Hb-iCo">
+                                <rect key="frame" x="71" y="240" width="233" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="0w1-Pt-Dyn"/>
+                                    <constraint firstAttribute="height" constant="240" id="DPK-u3-I7t"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2rv-UI-faR" firstAttribute="top" secondItem="wkC-Hb-iCo" secondAttribute="bottom" constant="37" id="2XY-K8-UTd"/>
+                            <constraint firstItem="wkC-Hb-iCo" firstAttribute="centerX" secondItem="zF9-jn-K5T" secondAttribute="centerX" id="1ok-5F-Ops"/>
                             <constraint firstItem="zF9-jn-K5T" firstAttribute="bottom" secondItem="GUG-cA-TaX" secondAttribute="bottom" constant="54" id="6cj-w2-eBT"/>
                             <constraint firstItem="wkC-Hb-iCo" firstAttribute="centerX" secondItem="GUG-cA-TaX" secondAttribute="centerX" id="AEY-Cc-bJV"/>
                             <constraint firstItem="zF9-jn-K5T" firstAttribute="leading" secondItem="GUG-cA-TaX" secondAttribute="leading" id="At1-Rf-b9o"/>
                             <constraint firstItem="ypk-ux-uTY" firstAttribute="top" secondItem="GUG-cA-TaX" secondAttribute="top" constant="52" id="GsO-sg-CwJ"/>
-                            <constraint firstItem="wkC-Hb-iCo" firstAttribute="top" secondItem="ts3-Jw-CJz" secondAttribute="bottom" constant="-80" id="HGz-TQ-nym"/>
                             <constraint firstItem="X1d-cy-sWv" firstAttribute="centerX" secondItem="GUG-cA-TaX" secondAttribute="centerX" id="MUQ-79-DaH"/>
                             <constraint firstItem="ts3-Jw-CJz" firstAttribute="centerX" secondItem="wkC-Hb-iCo" secondAttribute="centerX" id="SSm-iv-eZb"/>
                             <constraint firstItem="2rv-UI-faR" firstAttribute="centerX" secondItem="GUG-cA-TaX" secondAttribute="centerX" id="SWQ-Hh-a61"/>
                             <constraint firstItem="zF9-jn-K5T" firstAttribute="top" secondItem="X1d-cy-sWv" secondAttribute="bottom" constant="-77" id="TmH-ZU-VQT"/>
-                            <constraint firstItem="wkC-Hb-iCo" firstAttribute="centerY" secondItem="GUG-cA-TaX" secondAttribute="centerY" id="VO5-6V-171"/>
+                            <constraint firstItem="atB-Dk-Aiu" firstAttribute="top" secondItem="zF9-jn-K5T" secondAttribute="bottom" constant="-109" id="ZA1-f0-YRK"/>
+                            <constraint firstItem="atB-Dk-Aiu" firstAttribute="centerX" secondItem="2rv-UI-faR" secondAttribute="centerX" id="fSF-vc-PZV"/>
                             <constraint firstItem="GUG-cA-TaX" firstAttribute="top" secondItem="zF9-jn-K5T" secondAttribute="top" constant="20" id="g4t-NB-s6S"/>
+                            <constraint firstItem="wkC-Hb-iCo" firstAttribute="centerY" secondItem="zF9-jn-K5T" secondAttribute="centerY" id="kmY-2O-SNy"/>
                             <constraint firstItem="ypk-ux-uTY" firstAttribute="centerX" secondItem="GUG-cA-TaX" secondAttribute="centerX" id="m0L-x5-2Vs"/>
-                            <constraint firstItem="zF9-jn-K5T" firstAttribute="trailing" secondItem="GUG-cA-TaX" secondAttribute="trailing" constant="902" id="zwF-Hn-yeA"/>
+                            <constraint firstItem="ts3-Jw-CJz" firstAttribute="top" secondItem="X1d-cy-sWv" secondAttribute="bottom" constant="23" id="sj1-yd-jHT"/>
+                            <constraint firstItem="atB-Dk-Aiu" firstAttribute="top" secondItem="2rv-UI-faR" secondAttribute="bottom" constant="18" id="yuZ-8z-fPf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GUG-cA-TaX"/>
                     </view>
                     <connections>
+                        <outlet property="redeemFreeRidesButton" destination="atB-Dk-Aiu" id="PbW-kF-NKK"/>
                         <outlet property="sendFreeRidesButton" destination="2rv-UI-faR" id="CEx-yO-NDI"/>
                     </connections>
                 </viewController>
