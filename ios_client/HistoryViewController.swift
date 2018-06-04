@@ -47,6 +47,8 @@ class HistoryViewController: UIViewController, GMSMapViewDelegate {
                 self.ridesWithRidePingLocations = arrayOfRidesWithRidePingLocations
                 
                 self.drawRidesToMap()
+                
+                self.makeSpecialViewDefault()
             } else {
                 self.toastMessage(message: "Error Occurred Retrieving History", danger: true)
             }
@@ -57,7 +59,7 @@ class HistoryViewController: UIViewController, GMSMapViewDelegate {
         HomeViewController.mapView.clear()
         self.ridesWithRidePingLocations?.forEach({ (rideWithRidePingLocation) in
             
-
+            
             
             let path = GMSMutablePath()
             rideWithRidePingLocation["ride_ping_locations"].array?.forEach({ (pingLocationJSON) in
@@ -162,6 +164,35 @@ class HistoryViewController: UIViewController, GMSMapViewDelegate {
         self.specialView.layer.cornerRadius = 10
         
         self.rideIdLabel.text = "Totals"
+        
+        var ListOfRidePingLocations : [[JSON]] = []
+    
+        self.ridesWithRidePingLocations?.forEach({ rideWithPingLocations in
+            
+            ListOfRidePingLocations.append(rideWithPingLocations["ride_ping_locations"].array!)
+        })
+        
+        self.distanceLabel.text = "Distance: \(RideHelper().totalRideDistance(ListOfRidePingLocations: ListOfRidePingLocations))"
+        
+        var rides : [JSON] = []
+        
+        self.ridesWithRidePingLocations?.forEach({ (rwrpl) in
+            rides.append(rwrpl["ride"])
+        })
+        
+        let totalElapsedTime = RideHelper().totalElapsedTime(rides: rides)
+        
+        self.timeLabel.text = "Elapsed: \(totalElapsedTime)"
+        
+        var totalCost = 0.0
+        
+        self.ridesWithRidePingLocations?.forEach { (rwrpl) in
+            totalCost += rwrpl["calculated_cost"].doubleValue
+        }
+        
+        
+        self.costLabel.text = String(format: "Expense: $%.02f", totalCost / 100)
+        
     }
     
     func showSpecialView(incomingRideWithCost: (JSON, Double?, [JSON]?)?) {

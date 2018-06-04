@@ -28,9 +28,12 @@ class RideHelper {
         })
     }
     
-    func calculateRideDistance(ridePingLocations: [JSON]) -> String {
-        
+    func calculateRideDistanceInMeters(ridePingLocations: [JSON]) -> Double {
         var distanceInMeters = 0.0
+        
+        if ridePingLocations.count < 2 {
+            return distanceInMeters
+        }
         
         let coordinates = ridePingLocations.map({rpl -> CLLocation in
             
@@ -46,12 +49,30 @@ class RideHelper {
             distanceInMeters += c1.distance(from: c2)
         }
         
+        return distanceInMeters
+    }
+    
+    func calculateRideDistance(ridePingLocations: [JSON]) -> String {
+        let distanceInMeters = calculateRideDistanceInMeters(ridePingLocations: ridePingLocations)
+        
         let distanceInMiles = Measurement(value: distanceInMeters, unit: UnitLength.meters)
         
         return MeasurementFormatter().string(from: distanceInMiles)
     }
     
-    func elapsedTime(ride: JSON) -> String {
+    func totalRideDistance(ListOfRidePingLocations: [[JSON]]) -> String {
+        var totalDistance = 0.0
+        
+        ListOfRidePingLocations.forEach { (rpl) in
+            totalDistance += calculateRideDistanceInMeters(ridePingLocations: rpl)
+        }
+        
+        let distanceInMiles = Measurement(value: totalDistance, unit: UnitLength.meters)
+        
+        return MeasurementFormatter().string(from: distanceInMiles)
+    }
+    
+    func elapsedTimeInSeconds(ride: JSON) -> Int {
         let formatter = DateFormatter()
         
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -62,7 +83,22 @@ class RideHelper {
         
         let difference = Calendar.current.dateComponents([.minute, .second], from: start!, to: end!)
         
-        return "\(difference.minute!)m\(difference.second!)s"
+        return difference.minute! * 60 + difference.second!
+    }
+    
+    func elapsedTime(ride: JSON) -> String {
+        let seconds = elapsedTimeInSeconds(ride: ride)
+        return "\(seconds / 60)m\(seconds % 60)"
+    }
+    
+    func totalElapsedTime(rides: [JSON]) -> String {
+        var elapsedTime = 0
+        
+        rides.forEach { (ride) in
+            elapsedTime += elapsedTimeInSeconds(ride: ride)
+        }
+        
+        return "\(elapsedTime / 60)m\(elapsedTime % 60)"
     }
     
     
