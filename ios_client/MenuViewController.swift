@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Onboard
 
 class MenuViewController: UIViewController {
     
@@ -42,6 +43,8 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func zafarisButtonPressed(_ sender: Any) {
+        
+        self.toastMessage(message: "Zafaris are not available yet! Check back soon!", danger: false)
     }
     
     
@@ -88,7 +91,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func howToPressed(_ sender: Any) {
-//        let vc = HowToZootViewController.
+        HowToPage.makePage(sendingViewController: self)
     }
     
     @IBAction func safetyPressed(_ sender: Any) {}

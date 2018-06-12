@@ -374,6 +374,31 @@ class NetworkHelper {
         })
     }
     
+    func redeemPromo(email: String, completion: @escaping (Bool) -> Void) -> Void {
+        let headers : HTTPHeaders = getHeaders()
+        
+        Alamofire.request(DOMAIN + "/promo/create/\(email).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+            
+            switch response.result {
+            case .success(let raw):
+                
+                
+                let data = raw as! NSDictionary
+                
+                if data["success"] != nil && data["success"] as! Bool && (data["success"] as! Bool) == true {
+                    
+                    return completion(true)
+                } else {
+                    return completion(false)
+                }
+                
+            case .failure(let error):
+                print(error)
+                completion(false)
+            }
+        })
+    }
+    
     func addPaymentSource(sourceID: String, completion: @escaping (Bool) -> Void) -> Void {
         let headers : HTTPHeaders = getHeaders()
         

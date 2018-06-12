@@ -100,23 +100,24 @@ extension UIViewController {
     
     @objc func homeButtonPressed() {
         print("home button pressed")
-        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
-        
-        homeViewController?.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        let homeViewController : HomeViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
         
+        homeViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
-        self.present(homeViewController!, animated: true, completion: nil)
+        
+        
+        self.present(homeViewController, animated: true, completion: nil)
         
         self.removeFromParentViewController()
     }
     
     @objc func menuButtonPressed() {
-        let menuViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+        let menuViewController : MenuViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         
-        menuViewController?.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        menuViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
-        self.present(menuViewController!, animated: true, completion: nil)
+        self.present(menuViewController, animated: true, completion: nil)
         
     }
     

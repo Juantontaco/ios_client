@@ -38,7 +38,7 @@ class InviteFriendsViewController: UIViewController {
         if dictionary != nil {
             let email : String = dictionary!["uid"] as! String
             
-            let shareText = "Hey, you get a free ride with Zoot by redeeming my email. Simply redeem with this email: \(email)"
+            let shareText = "Hey, you get a free ride with Zoot by redeeming my email. Simply download the app and redeem on the Earn Free Rides page with this email: \(email)"
             let url : NSURL = NSURL(string: "https://www.ridezoot.com")!
             
             let activityVC : UIActivityViewController = UIActivityViewController(activityItems: [shareText, url], applicationActivities: nil)
@@ -63,6 +63,14 @@ class InviteFriendsViewController: UIViewController {
             let email = alertController.textFields?[0].text
             
             print(email!)
+            
+            NetworkHelper().redeemPromo(email: email!, completion: { (didWork) in
+                if didWork {
+                    self.toastMessage(message: "Promo Redeemed", danger: false)
+                } else {
+                    self.toastMessage(message: "You have either already redeemed a promo or there was an error redeeming promo.", danger: true)
+                }
+            })
             
         }
         
