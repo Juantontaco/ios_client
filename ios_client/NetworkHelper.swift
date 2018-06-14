@@ -377,7 +377,9 @@ class NetworkHelper {
     func redeemPromo(email: String, completion: @escaping (Bool) -> Void) -> Void {
         let headers : HTTPHeaders = getHeaders()
         
-        Alamofire.request(DOMAIN + "/promo/create/\(email).json", method: .post, headers: headers).validate().responseJSON(completionHandler: { response in
+        let params : Parameters = ["email" : email]
+        
+        Alamofire.request(DOMAIN + "/promo/create.json", method: .post, parameters: params, headers: headers).validate().responseJSON(completionHandler: { response in
             
             switch response.result {
             case .success(let raw):

@@ -40,6 +40,14 @@
 		13A6154320B1B16800049A60 /* AddedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154220B1B16800049A60 /* AddedExtensions.swift */; };
 		13A6154620B23F3700049A60 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154520B23F3700049A60 /* ChangePasswordViewController.swift */; };
 		13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6154720B2574B00049A60 /* HomeViewController.swift */; };
+		13BEBC9220D02D4600F56B89 /* SafetyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9120D02D4600F56B89 /* SafetyViewController.swift */; };
+		13BEBC9420D02D5900F56B89 /* StartYourExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9320D02D5900F56B89 /* StartYourExperienceViewController.swift */; };
+		13BEBC9620D02D6600F56B89 /* BrakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9520D02D6600F56B89 /* BrakingViewController.swift */; };
+		13BEBC9820D02D7100F56B89 /* RidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9720D02D7100F56B89 /* RidingViewController.swift */; };
+		13BEBC9A20D02D7C00F56B89 /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9920D02D7C00F56B89 /* ParkingViewController.swift */; };
+		13BEBC9C20D02D8A00F56B89 /* EndingYourExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9B20D02D8A00F56B89 /* EndingYourExperienceViewController.swift */; };
+		13BEBC9E20D02D9D00F56B89 /* EarnFreeRidesHowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9D20D02D9D00F56B89 /* EarnFreeRidesHowToViewController.swift */; };
+		13BEBCA020D02DAC00F56B89 /* PleaseObeyTheLawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BEBC9F20D02DAC00F56B89 /* PleaseObeyTheLawViewController.swift */; };
 		13D3A48620B4742C002A1DD1 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D3A48520B4742C002A1DD1 /* LocationHelper.swift */; };
 		13D3A48820B4C356002A1DD1 /* RideHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D3A48720B4C356002A1DD1 /* RideHelper.swift */; };
 		13D3A48A20B4EDB1002A1DD1 /* Scooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D3A48920B4EDB1002A1DD1 /* Scooter.swift */; };
@@ -108,6 +116,14 @@
 		13A6154220B1B16800049A60 /* AddedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedExtensions.swift; sourceTree = "<group>"; };
 		13A6154520B23F3700049A60 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		13A6154720B2574B00049A60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13BEBC9120D02D4600F56B89 /* SafetyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyViewController.swift; sourceTree = "<group>"; };
+		13BEBC9320D02D5900F56B89 /* StartYourExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartYourExperienceViewController.swift; sourceTree = "<group>"; };
+		13BEBC9520D02D6600F56B89 /* BrakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrakingViewController.swift; sourceTree = "<group>"; };
+		13BEBC9720D02D7100F56B89 /* RidingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidingViewController.swift; sourceTree = "<group>"; };
+		13BEBC9920D02D7C00F56B89 /* ParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
+		13BEBC9B20D02D8A00F56B89 /* EndingYourExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingYourExperienceViewController.swift; sourceTree = "<group>"; };
+		13BEBC9D20D02D9D00F56B89 /* EarnFreeRidesHowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnFreeRidesHowToViewController.swift; sourceTree = "<group>"; };
+		13BEBC9F20D02DAC00F56B89 /* PleaseObeyTheLawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PleaseObeyTheLawViewController.swift; sourceTree = "<group>"; };
 		13D3A48520B4742C002A1DD1 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		13D3A48720B4C356002A1DD1 /* RideHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHelper.swift; sourceTree = "<group>"; };
 		13D3A48920B4EDB1002A1DD1 /* Scooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scooter.swift; sourceTree = "<group>"; };
@@ -173,6 +189,7 @@
 		131543BE20AF6EF4002BD3E1 /* ios_client */ = {
 			isa = PBXGroup;
 			children = (
+				13BEBC9020D02C9D00F56B89 /* HowToVCs */,
 				134F809E20AFDD2500B13E64 /* ios_client.entitlements */,
 				131543BF20AF6EF4002BD3E1 /* AppDelegate.swift */,
 				131543C120AF6EF4002BD3E1 /* LoginViewController.swift */,
@@ -205,10 +222,8 @@
 				135D8C9A20C19B11009C22BD /* PaymentSourceTableViewCell.swift */,
 				135D8C9C20C19B89009C22BD /* PaymentSourceTableViewCellView.xib */,
 				135D8C9E20C1A927009C22BD /* InviteFriendsViewController.swift */,
-				135D8CA020C1ED8C009C22BD /* HowToZootViewController.swift */,
 				13517DE020C3075800BD428E /* RideHistorySnippet.xib */,
 				13517DE220C3091E00BD428E /* RideHistorySnippetView.swift */,
-				138FD33720CC402C00084006 /* HowToPage.swift */,
 			);
 			path = ios_client;
 			sourceTree = "<group>";
@@ -229,6 +244,23 @@
 				131543E420AF6EF7002BD3E1 /* Info.plist */,
 			);
 			path = ios_clientUITests;
+			sourceTree = "<group>";
+		};
+		13BEBC9020D02C9D00F56B89 /* HowToVCs */ = {
+			isa = PBXGroup;
+			children = (
+				135D8CA020C1ED8C009C22BD /* HowToZootViewController.swift */,
+				138FD33720CC402C00084006 /* HowToPage.swift */,
+				13BEBC9120D02D4600F56B89 /* SafetyViewController.swift */,
+				13BEBC9320D02D5900F56B89 /* StartYourExperienceViewController.swift */,
+				13BEBC9520D02D6600F56B89 /* BrakingViewController.swift */,
+				13BEBC9720D02D7100F56B89 /* RidingViewController.swift */,
+				13BEBC9920D02D7C00F56B89 /* ParkingViewController.swift */,
+				13BEBC9B20D02D8A00F56B89 /* EndingYourExperienceViewController.swift */,
+				13BEBC9D20D02D9D00F56B89 /* EarnFreeRidesHowToViewController.swift */,
+				13BEBC9F20D02DAC00F56B89 /* PleaseObeyTheLawViewController.swift */,
+			);
+			path = HowToVCs;
 			sourceTree = "<group>";
 		};
 		866A3BC5AB2EBD3B466AED8B /* Pods */ = {
@@ -481,6 +513,7 @@
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeViewController/SwipeViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -492,6 +525,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,31 +544,39 @@
 				131543C220AF6EF4002BD3E1 /* LoginViewController.swift in Sources */,
 				131543C820AF6EF4002BD3E1 /* ios_client.xcdatamodeld in Sources */,
 				1321953C20BB7DD80010A0F6 /* PaymentSource.swift in Sources */,
+				13BEBC9C20D02D8A00F56B89 /* EndingYourExperienceViewController.swift in Sources */,
+				13BEBC9420D02D5900F56B89 /* StartYourExperienceViewController.swift in Sources */,
 				13A6154620B23F3700049A60 /* ChangePasswordViewController.swift in Sources */,
 				135D8C9520BF40BA009C22BD /* HistoryViewController.swift in Sources */,
 				1349EA4520B9E5A700A5C87B /* AddPaymentSourceViewController.swift in Sources */,
 				13D3A48A20B4EDB1002A1DD1 /* Scooter.swift in Sources */,
 				13D3A48820B4C356002A1DD1 /* RideHelper.swift in Sources */,
+				13BEBCA020D02DAC00F56B89 /* PleaseObeyTheLawViewController.swift in Sources */,
 				13A6154320B1B16800049A60 /* AddedExtensions.swift in Sources */,
 				138FD33820CC402C00084006 /* HowToPage.swift in Sources */,
 				13A6154120B10A0B00049A60 /* MenuViewController.swift in Sources */,
 				1321954020BCA6EA0010A0F6 /* RideSummaryViewController.swift in Sources */,
 				13A2C4C920AFD45900BA88F8 /* NetworkHelper.swift in Sources */,
+				13BEBC9E20D02D9D00F56B89 /* EarnFreeRidesHowToViewController.swift in Sources */,
+				13BEBC9A20D02D7C00F56B89 /* ParkingViewController.swift in Sources */,
 				1321953E20BC4FE20010A0F6 /* SelectPaymentViewController.swift in Sources */,
 				135D8C9B20C19B11009C22BD /* PaymentSourceTableViewCell.swift in Sources */,
 				13517DE320C3091E00BD428E /* RideHistorySnippetView.swift in Sources */,
 				135D8C9720C142BE009C22BD /* CustomFormViewController.swift in Sources */,
+				13BEBC9620D02D6600F56B89 /* BrakingViewController.swift in Sources */,
 				1349EA4120B86DF100A5C87B /* StartRideViewController.swift in Sources */,
 				13A6154820B2574B00049A60 /* HomeViewController.swift in Sources */,
 				1349EA4720BA207C00A5C87B /* PaymentSourcesViewController.swift in Sources */,
 				13A2C4C720AF8DFE00BA88F8 /* signUpViewController.swift in Sources */,
 				135D8CA120C1ED8C009C22BD /* HowToZootViewController.swift in Sources */,
 				131543C020AF6EF4002BD3E1 /* AppDelegate.swift in Sources */,
+				13BEBC9220D02D4600F56B89 /* SafetyViewController.swift in Sources */,
 				135D8C9F20C1A927009C22BD /* InviteFriendsViewController.swift in Sources */,
 				1349EA3F20B5D12B00A5C87B /* QRCodeViewController.swift in Sources */,
 				135D8C9920C150FB009C22BD /* PostCustomFormViewController.swift in Sources */,
 				134F80A020AFE97C00B13E64 /* AccountViewController.swift in Sources */,
 				1349EA4320B9B5FD00A5C87B /* InRideViewController.swift in Sources */,
+				13BEBC9820D02D7100F56B89 /* RidingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

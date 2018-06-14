@@ -91,7 +91,12 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func howToPressed(_ sender: Any) {
-        HowToPage.makePage(sendingViewController: self)
+//        HowToPage.makePage(sendingViewController: self)
+        
+        let swipeVC : SwipeableViewController = SwipeableViewController()
+        swipeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        present(swipeVC, animated: true, completion: nil)
     }
     
     @IBAction func safetyPressed(_ sender: Any) {}

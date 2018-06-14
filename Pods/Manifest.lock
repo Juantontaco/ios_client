@@ -11,8 +11,9 @@ PODS:
   - IQKeyboardManagerSwift (6.0.3)
   - Locksmith (4.0.0)
   - Onboard (2.3.3)
-  - Stripe (13.0.1)
+  - Stripe (13.0.3)
   - SwiftyJSON (4.1.0)
+  - SwipeViewController (1.0)
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Onboard
   - Stripe
   - SwiftyJSON (~> 4.0)
+  - SwipeViewController (from `https://github.com/fortmarek/SwipeViewController`, tag `1.1.1`)
   - Toast-Swift (~> 3.0.1)
 
 SPEC REPOS:
@@ -40,6 +42,16 @@ SPEC REPOS:
     - SwiftyJSON
     - Toast-Swift
 
+EXTERNAL SOURCES:
+  SwipeViewController:
+    :git: https://github.com/fortmarek/SwipeViewController
+    :tag: 1.1.1
+
+CHECKOUT OPTIONS:
+  SwipeViewController:
+    :git: https://github.com/fortmarek/SwipeViewController
+    :tag: 1.1.1
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Cosmos: 7bcee0fa858a9355a214f2a181be5dffcee42c81
@@ -48,10 +60,11 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
-  Stripe: b3c69e4a269d5ae707916a090ee54b1f6011ccd9
+  Stripe: 76c203e21555089b708e6cbe972a3e3baf1ab4d8
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwipeViewController: 619aa4a740560886370da976c0b510e8e920f76c
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 403981ac45ee59cbc93ba4884b7442381fada5a5
+PODFILE CHECKSUM: 5d0d2e2120813699baecedf3a99684ed6b6f729f
 
 COCOAPODS: 1.5.2

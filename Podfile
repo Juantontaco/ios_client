@@ -16,6 +16,7 @@ target 'ios_client' do
   pod 'Cosmos', '~> 16.0'
   pod 'Onboard'
   pod 'IQKeyboardManagerSwift'
+  pod 'SwipeViewController', :git => 'https://github.com/fortmarek/SwipeViewController', :tag => '1.1.1'
 
   target 'ios_clientTests' do
     inherit! :search_paths

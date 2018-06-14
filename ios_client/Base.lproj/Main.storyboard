@@ -587,11 +587,67 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find &amp; Unlock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eft-EZ-nwt">
+                                <rect key="frame" x="100.5" y="121" width="173.5" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="cjR-wd-kih"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-z0-k4s">
+                                <rect key="frame" x="89" y="263" width="197" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="Ih7-A4-Ez3"/>
+                                    <constraint firstAttribute="width" constant="197" id="xjP-4H-JtO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a nearby Zooter and tap the start button to unlock." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7p-XX-hFH">
+                                <rect key="frame" x="16" y="451" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="GSb-MN-xDV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9F-lc-LaJ">
+                                <rect key="frame" x="16" y="563" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="uSy-GY-ZXP"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+U3dpcGUgdG8gY29udGludWUg4oC64oC64oC6DAsKCgogA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0MK-wl-ePJ">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Vfo-20-x4h"/>
+                                    <constraint firstAttribute="height" constant="56" id="h2Y-iD-Vk8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="yjy-z0-k4s" firstAttribute="centerY" secondItem="5vN-Wb-gGI" secondAttribute="centerY" id="3KR-48-NjT"/>
                             <constraint firstItem="mrc-YH-PuL" firstAttribute="centerX" secondItem="5vN-Wb-gGI" secondAttribute="centerX" id="6pu-RU-UYK"/>
+                            <constraint firstItem="eft-EZ-nwt" firstAttribute="centerX" secondItem="5vN-Wb-gGI" secondAttribute="centerX" id="FY4-UJ-z4H"/>
                             <constraint firstItem="mrc-YH-PuL" firstAttribute="top" secondItem="5vN-Wb-gGI" secondAttribute="top" constant="54" id="Hhf-zE-ei1"/>
+                            <constraint firstItem="yjy-z0-k4s" firstAttribute="centerX" secondItem="5vN-Wb-gGI" secondAttribute="centerX" id="Q2V-m4-tfJ"/>
+                            <constraint firstItem="5vN-Wb-gGI" firstAttribute="bottom" secondItem="B9F-lc-LaJ" secondAttribute="bottom" constant="20" id="SOL-ed-dfB"/>
+                            <constraint firstItem="eft-EZ-nwt" firstAttribute="top" secondItem="mrc-YH-PuL" secondAttribute="bottom" constant="25" id="XI3-go-cUg"/>
+                            <constraint firstItem="0MK-wl-ePJ" firstAttribute="centerX" secondItem="5vN-Wb-gGI" secondAttribute="centerX" id="ZqK-16-Gdu"/>
+                            <constraint firstItem="r7p-XX-hFH" firstAttribute="leading" secondItem="5vN-Wb-gGI" secondAttribute="leading" constant="16" id="bFa-tA-aMO"/>
+                            <constraint firstItem="5vN-Wb-gGI" firstAttribute="trailing" secondItem="r7p-XX-hFH" secondAttribute="trailing" constant="16" id="g5e-zU-XaX"/>
+                            <constraint firstItem="5vN-Wb-gGI" firstAttribute="top" secondItem="0MK-wl-ePJ" secondAttribute="top" constant="10" id="ltV-h9-OxN"/>
+                            <constraint firstItem="B9F-lc-LaJ" firstAttribute="leading" secondItem="5vN-Wb-gGI" secondAttribute="leading" constant="16" id="nBr-YT-wTu"/>
+                            <constraint firstItem="5vN-Wb-gGI" firstAttribute="trailing" secondItem="B9F-lc-LaJ" secondAttribute="trailing" constant="16" id="oac-PA-Su2"/>
+                            <constraint firstItem="r7p-XX-hFH" firstAttribute="top" secondItem="yjy-z0-k4s" secondAttribute="bottom" constant="27" id="yHZ-gd-ktq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5vN-Wb-gGI"/>
                     </view>
@@ -599,6 +655,715 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55V-ei-EmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1391.2" y="3143.4782608695655"/>
+        </scene>
+        <!--Safety View Controller-->
+        <scene sceneID="Cgb-KD-e94">
+            <objects>
+                <viewController storyboardIdentifier="SafetyViewController" id="dRi-Kt-Yqc" customClass="SafetyViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VM7-0x-KyY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBt-py-dO6">
+                                <rect key="frame" x="135" y="79" width="105" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safety" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1j-EY-Lqj">
+                                <rect key="frame" x="151.5" y="126" width="71.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="MAd-I3-rqM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Always wear a helmet while riding." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y6-8P-mw7">
+                                <rect key="frame" x="16" y="456" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="R5G-Po-HDA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-c3-ua1">
+                                <rect key="frame" x="16" y="568" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="dTm-iT-ZFD"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fGZ-hB-JeY">
+                                <rect key="frame" x="126" y="15" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="nEk-1u-uIo"/>
+                                    <constraint firstAttribute="height" constant="56" id="qtv-KH-qWf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helmet icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Ae-kj-ehj">
+                                <rect key="frame" x="89" y="212" width="197" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="JGJ-VX-tvf"/>
+                                    <constraint firstAttribute="height" constant="161" id="guf-tA-Yah"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9is-eJ-IVn" firstAttribute="trailing" secondItem="3Y6-8P-mw7" secondAttribute="trailing" constant="16" id="AL9-fv-HH5"/>
+                            <constraint firstItem="Yyg-c3-ua1" firstAttribute="leading" secondItem="9is-eJ-IVn" secondAttribute="leading" constant="16" id="Ekw-TV-D7K"/>
+                            <constraint firstItem="eBt-py-dO6" firstAttribute="centerX" secondItem="9is-eJ-IVn" secondAttribute="centerX" id="HsR-7c-eJZ"/>
+                            <constraint firstItem="B1j-EY-Lqj" firstAttribute="top" secondItem="eBt-py-dO6" secondAttribute="bottom" constant="25" id="KbS-jo-DuI"/>
+                            <constraint firstItem="Yyg-c3-ua1" firstAttribute="top" secondItem="3Y6-8P-mw7" secondAttribute="bottom" constant="28" id="RQr-uD-T0R"/>
+                            <constraint firstItem="9is-eJ-IVn" firstAttribute="top" secondItem="fGZ-hB-JeY" secondAttribute="top" constant="5" id="Tb4-eu-vhS"/>
+                            <constraint firstItem="1Ae-kj-ehj" firstAttribute="top" secondItem="B1j-EY-Lqj" secondAttribute="bottom" constant="51" id="U6j-1O-3jc"/>
+                            <constraint firstItem="1Ae-kj-ehj" firstAttribute="centerX" secondItem="9is-eJ-IVn" secondAttribute="centerX" id="Vo8-qX-5ax"/>
+                            <constraint firstItem="fGZ-hB-JeY" firstAttribute="centerX" secondItem="9is-eJ-IVn" secondAttribute="centerX" id="do4-e9-f2P"/>
+                            <constraint firstItem="eBt-py-dO6" firstAttribute="top" secondItem="9is-eJ-IVn" secondAttribute="top" constant="59" id="gwj-hB-3mw"/>
+                            <constraint firstItem="B1j-EY-Lqj" firstAttribute="centerX" secondItem="9is-eJ-IVn" secondAttribute="centerX" id="n5c-U1-OFd"/>
+                            <constraint firstItem="3Y6-8P-mw7" firstAttribute="leading" secondItem="9is-eJ-IVn" secondAttribute="leading" constant="16" id="olT-qo-40v"/>
+                            <constraint firstItem="9is-eJ-IVn" firstAttribute="trailing" secondItem="Yyg-c3-ua1" secondAttribute="trailing" constant="16" id="uN4-8L-U34"/>
+                            <constraint firstItem="9is-eJ-IVn" firstAttribute="bottom" secondItem="Yyg-c3-ua1" secondAttribute="bottom" constant="15" id="yAd-95-T4u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9is-eJ-IVn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEe-vV-681" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647.20000000000005" y="3147.9760119940033"/>
+        </scene>
+        <!--Start Your Experience View Controller-->
+        <scene sceneID="Z7J-Oc-Dkp">
+            <objects>
+                <viewController storyboardIdentifier="StartYourExperienceViewController" id="0RE-zr-ddY" customClass="StartYourExperienceViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6D-uE-KNs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8j-jn-pQU">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoW-Zv-HWi">
+                                <rect key="frame" x="55" y="121" width="264" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="throttle icon" translatesAutoresizingMaskIntoConstraints="NO" id="EZM-0e-Nx1">
+                                <rect key="frame" x="29" y="358" width="316" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="HBe-iZ-0M8"/>
+                                    <constraint firstAttribute="width" constant="316" id="m8u-Kx-ijI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then push the throttle with your right thumb" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAn-eL-JEE">
+                                <rect key="frame" x="18" y="415" width="339" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Xk9-2o-gm6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-Dh-Abw">
+                                <rect key="frame" x="16" y="563" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="gfe-BG-12l"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dpe-Ty-zDi">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="W23-3G-W8t"/>
+                                    <constraint firstAttribute="height" constant="56" id="kBM-Py-Mja"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kick to start" translatesAutoresizingMaskIntoConstraints="NO" id="eGj-I8-0J5">
+                                <rect key="frame" x="67" y="164" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ZNy-YB-x0L"/>
+                                    <constraint firstAttribute="width" constant="240" id="h2B-ZR-mxS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kick Start Three Times" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBq-YP-X9I">
+                                <rect key="frame" x="16" y="266" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="4aS-xg-T2t"/>
+                                    <constraint firstAttribute="height" constant="84" id="sqW-hY-dGM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EZM-0e-Nx1" firstAttribute="top" secondItem="MBq-YP-X9I" secondAttribute="bottom" constant="8" id="2wB-zh-rya"/>
+                            <constraint firstItem="EZM-0e-Nx1" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="3DL-4H-Ext"/>
+                            <constraint firstItem="LAn-eL-JEE" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="8fU-bB-mee"/>
+                            <constraint firstItem="V8j-jn-pQU" firstAttribute="top" secondItem="Dpe-Ty-zDi" secondAttribute="bottom" constant="8" id="ALf-Ac-kyc"/>
+                            <constraint firstItem="DOd-0j-cmm" firstAttribute="top" secondItem="Dpe-Ty-zDi" secondAttribute="top" constant="10" id="B5S-iK-Epq"/>
+                            <constraint firstItem="LAn-eL-JEE" firstAttribute="top" secondItem="EZM-0e-Nx1" secondAttribute="bottom" constant="8" id="CTk-my-bba"/>
+                            <constraint firstItem="nzU-Dh-Abw" firstAttribute="leading" secondItem="DOd-0j-cmm" secondAttribute="leading" constant="16" id="GIx-wt-g6b"/>
+                            <constraint firstItem="V8j-jn-pQU" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="Hk3-uU-4dE"/>
+                            <constraint firstItem="eGj-I8-0J5" firstAttribute="top" secondItem="uoW-Zv-HWi" secondAttribute="bottom" constant="8" id="Kwe-J1-FcK"/>
+                            <constraint firstItem="Dpe-Ty-zDi" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="NKz-0l-Nnn"/>
+                            <constraint firstItem="MBq-YP-X9I" firstAttribute="top" secondItem="eGj-I8-0J5" secondAttribute="bottom" constant="-26" id="NNR-Wa-RIi"/>
+                            <constraint firstItem="uoW-Zv-HWi" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="Q6s-7Z-19B"/>
+                            <constraint firstItem="eGj-I8-0J5" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="Zzg-ft-DBy"/>
+                            <constraint firstItem="LAn-eL-JEE" firstAttribute="leading" secondItem="DOd-0j-cmm" secondAttribute="leading" constant="18" id="kYC-Du-hbr"/>
+                            <constraint firstItem="MBq-YP-X9I" firstAttribute="centerX" secondItem="DOd-0j-cmm" secondAttribute="centerX" id="mBb-W6-vvI"/>
+                            <constraint firstItem="uoW-Zv-HWi" firstAttribute="top" secondItem="V8j-jn-pQU" secondAttribute="bottom" constant="25" id="mxq-AX-81P"/>
+                            <constraint firstItem="DOd-0j-cmm" firstAttribute="trailing" secondItem="LAn-eL-JEE" secondAttribute="trailing" constant="18" id="pJx-c8-ABo"/>
+                            <constraint firstItem="DOd-0j-cmm" firstAttribute="bottom" secondItem="nzU-Dh-Abw" secondAttribute="bottom" constant="20" id="rMV-0n-WXf"/>
+                            <constraint firstItem="DOd-0j-cmm" firstAttribute="trailing" secondItem="nzU-Dh-Abw" secondAttribute="trailing" constant="16" id="yJH-nn-AMS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DOd-0j-cmm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWr-Ut-qeo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103.2" y="3130.8845577211396"/>
+        </scene>
+        <!--Braking View Controller-->
+        <scene sceneID="PZF-RT-vXq">
+            <objects>
+                <viewController storyboardIdentifier="BrakingViewController" id="vkh-6a-9wf" customClass="BrakingViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8O-LA-KrG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9s-Nx-e30">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Bca-KV-MeD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Braking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4X-ow-AQD">
+                                <rect key="frame" x="142" y="121" width="91" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="1ac-BW-ZZm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brake icon" translatesAutoresizingMaskIntoConstraints="NO" id="6uz-Ih-mun">
+                                <rect key="frame" x="89" y="207" width="197" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="Tjc-sf-jaA"/>
+                                    <constraint firstAttribute="width" constant="197" id="lpR-iB-5ag"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squeeze the brake with your left hand to stop the Zooter." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-eT-igN">
+                                <rect key="frame" x="16" y="451" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="yvo-p9-IOq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypw-vN-ghs">
+                                <rect key="frame" x="93" y="563" width="189" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="paz-m9-I2z"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-L0-guf">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Dfc-ot-tpy"/>
+                                    <constraint firstAttribute="height" constant="56" id="bej-wa-sbO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RBh-eT-igN" firstAttribute="leading" secondItem="LaY-Zt-w7Z" secondAttribute="leading" constant="16" id="11A-9g-feR"/>
+                            <constraint firstItem="LaY-Zt-w7Z" firstAttribute="bottom" secondItem="Ypw-vN-ghs" secondAttribute="bottom" constant="20" id="6rA-oe-NR6"/>
+                            <constraint firstItem="Ypw-vN-ghs" firstAttribute="centerX" secondItem="LaY-Zt-w7Z" secondAttribute="centerX" id="BRP-X2-aeD"/>
+                            <constraint firstItem="Ypw-vN-ghs" firstAttribute="top" secondItem="RBh-eT-igN" secondAttribute="bottom" constant="28" id="DAF-um-MCX"/>
+                            <constraint firstItem="6uz-Ih-mun" firstAttribute="centerX" secondItem="LaY-Zt-w7Z" secondAttribute="centerX" id="E2a-xu-lBv"/>
+                            <constraint firstItem="LaY-Zt-w7Z" firstAttribute="trailing" secondItem="RBh-eT-igN" secondAttribute="trailing" constant="16" id="QgD-QT-vGQ"/>
+                            <constraint firstItem="6uz-Ih-mun" firstAttribute="top" secondItem="N4X-ow-AQD" secondAttribute="bottom" constant="51" id="Uqy-JP-eFC"/>
+                            <constraint firstItem="M9s-Nx-e30" firstAttribute="top" secondItem="u9l-L0-guf" secondAttribute="bottom" constant="8" id="Vj0-PF-ElO"/>
+                            <constraint firstItem="N4X-ow-AQD" firstAttribute="centerX" secondItem="LaY-Zt-w7Z" secondAttribute="centerX" id="jAU-50-NSi"/>
+                            <constraint firstItem="N4X-ow-AQD" firstAttribute="top" secondItem="M9s-Nx-e30" secondAttribute="bottom" constant="25" id="pwC-ac-ODw"/>
+                            <constraint firstItem="LaY-Zt-w7Z" firstAttribute="top" secondItem="u9l-L0-guf" secondAttribute="top" constant="10" id="rMW-V4-v06"/>
+                            <constraint firstItem="RBh-eT-igN" firstAttribute="centerX" secondItem="LaY-Zt-w7Z" secondAttribute="centerX" id="ufq-7s-q3D"/>
+                            <constraint firstItem="u9l-L0-guf" firstAttribute="centerX" secondItem="LaY-Zt-w7Z" secondAttribute="centerX" id="vh6-VQ-3N6"/>
+                            <constraint firstItem="M9s-Nx-e30" firstAttribute="centerX" secondItem="LaY-Zt-w7Z" secondAttribute="centerX" id="zuM-xT-FsM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LaY-Zt-w7Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8WD-LN-EG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.2" y="3140.7796101949029"/>
+        </scene>
+        <!--Riding View Controller-->
+        <scene sceneID="8HZ-mC-gKR">
+            <objects>
+                <viewController storyboardIdentifier="RidingViewController" id="wJR-1Q-1yn" customClass="RidingViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cU0-Nc-poh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEE-fZ-zTK">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Oky-IW-T3n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-2C-vbI">
+                                <rect key="frame" x="150" y="121" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="IlL-8h-Oul"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike lane icon" translatesAutoresizingMaskIntoConstraints="NO" id="368-8M-Fih">
+                                <rect key="frame" x="89" y="207" width="197" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="695-G3-Vib"/>
+                                    <constraint firstAttribute="width" constant="197" id="kni-hM-Clr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride in the bike lane when available. Do not ride on sidewalks." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV5-8c-aIn">
+                                <rect key="frame" x="16" y="451" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="LFQ-fi-ItA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXU-Np-JKJ">
+                                <rect key="frame" x="93" y="563" width="189" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="58q-DB-GK6"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="YrC-J3-x2z">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="1Kh-JZ-Mto"/>
+                                    <constraint firstAttribute="width" constant="122" id="Gh4-JX-G89"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eNQ-eU-08Y" firstAttribute="bottom" secondItem="FXU-Np-JKJ" secondAttribute="bottom" constant="20" id="139-3O-r2t"/>
+                            <constraint firstItem="FXU-Np-JKJ" firstAttribute="centerX" secondItem="eNQ-eU-08Y" secondAttribute="centerX" id="26e-M7-QL2"/>
+                            <constraint firstItem="vV5-8c-aIn" firstAttribute="leading" secondItem="eNQ-eU-08Y" secondAttribute="leading" constant="16" id="3NY-f4-c4t"/>
+                            <constraint firstItem="kEE-fZ-zTK" firstAttribute="top" secondItem="YrC-J3-x2z" secondAttribute="bottom" constant="8" id="3ea-Kj-PQ2"/>
+                            <constraint firstItem="Hgz-2C-vbI" firstAttribute="centerX" secondItem="eNQ-eU-08Y" secondAttribute="centerX" id="81K-4I-frK"/>
+                            <constraint firstItem="YrC-J3-x2z" firstAttribute="centerX" secondItem="eNQ-eU-08Y" secondAttribute="centerX" id="GjM-FI-AAQ"/>
+                            <constraint firstItem="368-8M-Fih" firstAttribute="top" secondItem="Hgz-2C-vbI" secondAttribute="bottom" constant="51" id="M9c-Yh-w3Z"/>
+                            <constraint firstItem="FXU-Np-JKJ" firstAttribute="top" secondItem="vV5-8c-aIn" secondAttribute="bottom" constant="28" id="WX5-9p-ZfA"/>
+                            <constraint firstItem="eNQ-eU-08Y" firstAttribute="trailing" secondItem="vV5-8c-aIn" secondAttribute="trailing" constant="16" id="a6N-Ev-JGv"/>
+                            <constraint firstItem="vV5-8c-aIn" firstAttribute="centerX" secondItem="eNQ-eU-08Y" secondAttribute="centerX" id="eFO-w0-p1Y"/>
+                            <constraint firstItem="Hgz-2C-vbI" firstAttribute="top" secondItem="kEE-fZ-zTK" secondAttribute="bottom" constant="25" id="fnh-R3-dK6"/>
+                            <constraint firstItem="368-8M-Fih" firstAttribute="centerX" secondItem="eNQ-eU-08Y" secondAttribute="centerX" id="huD-df-aLB"/>
+                            <constraint firstItem="kEE-fZ-zTK" firstAttribute="centerX" secondItem="eNQ-eU-08Y" secondAttribute="centerX" id="kxM-Tc-P0j"/>
+                            <constraint firstItem="eNQ-eU-08Y" firstAttribute="top" secondItem="YrC-J3-x2z" secondAttribute="top" constant="10" id="plo-IJ-FOr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eNQ-eU-08Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRI-t4-Bwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704.8" y="3140.7796101949029"/>
+        </scene>
+        <!--Parking View Controller-->
+        <scene sceneID="yer-tP-BrG">
+            <objects>
+                <viewController storyboardIdentifier="ParkingViewController" id="oTY-he-wu2" customClass="ParkingViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eRe-Lo-zEh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjL-aw-nYD">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="rRP-tb-jor"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onq-HR-ug6">
+                                <rect key="frame" x="143" y="121" width="89" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="8J0-YJ-aBI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scooter park" translatesAutoresizingMaskIntoConstraints="NO" id="a1B-PN-869">
+                                <rect key="frame" x="89" y="207" width="197" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="ddr-8g-zWO"/>
+                                    <constraint firstAttribute="height" constant="161" id="w4U-SF-7VK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Park near sidewalk edges, bike racks, and designated Zooter zones." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLd-fN-rRZ">
+                                <rect key="frame" x="16" y="451" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="6wJ-Lg-06r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-xu-aag">
+                                <rect key="frame" x="93" y="563" width="189" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="tnO-GB-155"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="teA-4B-WWS">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="0h3-N4-fcw"/>
+                                    <constraint firstAttribute="height" constant="56" id="99L-2V-rPu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a1B-PN-869" firstAttribute="top" secondItem="Onq-HR-ug6" secondAttribute="bottom" constant="51" id="7ra-kC-UQ3"/>
+                            <constraint firstItem="KLd-fN-rRZ" firstAttribute="centerX" secondItem="2rN-VK-733" secondAttribute="centerX" id="FV1-Jn-pu7"/>
+                            <constraint firstItem="Onq-HR-ug6" firstAttribute="top" secondItem="RjL-aw-nYD" secondAttribute="bottom" constant="25" id="IcS-ZU-VZN"/>
+                            <constraint firstItem="HnJ-xu-aag" firstAttribute="top" secondItem="KLd-fN-rRZ" secondAttribute="bottom" constant="28" id="Uts-Pt-9wP"/>
+                            <constraint firstItem="teA-4B-WWS" firstAttribute="centerX" secondItem="2rN-VK-733" secondAttribute="centerX" id="Vpg-qF-PVD"/>
+                            <constraint firstItem="Onq-HR-ug6" firstAttribute="centerX" secondItem="2rN-VK-733" secondAttribute="centerX" id="Wkb-Ij-GAY"/>
+                            <constraint firstItem="2rN-VK-733" firstAttribute="trailing" secondItem="KLd-fN-rRZ" secondAttribute="trailing" constant="16" id="bsn-09-Zo6"/>
+                            <constraint firstItem="RjL-aw-nYD" firstAttribute="centerX" secondItem="2rN-VK-733" secondAttribute="centerX" id="hgw-K7-y97"/>
+                            <constraint firstItem="HnJ-xu-aag" firstAttribute="centerX" secondItem="2rN-VK-733" secondAttribute="centerX" id="l9I-gO-Vqo"/>
+                            <constraint firstItem="2rN-VK-733" firstAttribute="bottom" secondItem="HnJ-xu-aag" secondAttribute="bottom" constant="20" id="rkw-2S-CR5"/>
+                            <constraint firstItem="KLd-fN-rRZ" firstAttribute="leading" secondItem="2rN-VK-733" secondAttribute="leading" constant="16" id="uiA-a9-kOA"/>
+                            <constraint firstItem="a1B-PN-869" firstAttribute="centerX" secondItem="2rN-VK-733" secondAttribute="centerX" id="vX3-Zo-mdw"/>
+                            <constraint firstItem="2rN-VK-733" firstAttribute="top" secondItem="teA-4B-WWS" secondAttribute="top" constant="10" id="xGJ-h1-gpw"/>
+                            <constraint firstItem="RjL-aw-nYD" firstAttribute="top" secondItem="teA-4B-WWS" secondAttribute="bottom" constant="8" id="y02-N0-TxZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2rN-VK-733"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B78-jb-n1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352.8000000000002" y="3142.5787106446778"/>
+        </scene>
+        <!--Ending Your Experience View Controller-->
+        <scene sceneID="Es5-4o-OQ8">
+            <objects>
+                <viewController storyboardIdentifier="EndingYourExperienceViewController" id="yVF-kS-8fF" customClass="EndingYourExperienceViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nfm-ib-E3I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPs-Mb-6sf">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ending Your Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDt-9Q-j4U">
+                                <rect key="frame" x="45" y="121" width="284" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5 star" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-Id-KQu">
+                                <rect key="frame" x="29" y="358" width="316" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="rh6-m5-C7m"/>
+                                    <constraint firstAttribute="height" constant="49" id="wXk-DQ-tFo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate your experience and leave us feedback on how to make it better!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5F-JW-VFg">
+                                <rect key="frame" x="16" y="415" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="4cv-Ig-fAg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpY-Jp-KqT">
+                                <rect key="frame" x="16" y="563" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Luu-je-ja0"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="e1L-vI-RiR">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="UC0-sz-zs4"/>
+                                    <constraint firstAttribute="height" constant="56" id="zOv-9l-kRV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the end button to lock the Zooter." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeH-E9-CIU">
+                                <rect key="frame" x="16" y="266" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Qhk-v5-gVr"/>
+                                    <constraint firstAttribute="width" constant="343" id="QoC-am-Coz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="End trip button" translatesAutoresizingMaskIntoConstraints="NO" id="P69-X3-clU">
+                                <rect key="frame" x="67" y="164" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FAZ-er-doz"/>
+                                    <constraint firstAttribute="height" constant="128" id="G1v-sy-OPC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hPs-Mb-6sf" firstAttribute="top" secondItem="e1L-vI-RiR" secondAttribute="bottom" constant="8" id="C9H-Fz-UO7"/>
+                            <constraint firstItem="fgb-iT-z3G" firstAttribute="bottom" secondItem="ZpY-Jp-KqT" secondAttribute="bottom" constant="20" id="I9V-lb-oC2"/>
+                            <constraint firstItem="FDt-9Q-j4U" firstAttribute="top" secondItem="hPs-Mb-6sf" secondAttribute="bottom" constant="25" id="Nen-Qz-9LC"/>
+                            <constraint firstItem="e1L-vI-RiR" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="YTJ-Yb-yqO"/>
+                            <constraint firstItem="8ef-Id-KQu" firstAttribute="top" secondItem="DeH-E9-CIU" secondAttribute="bottom" constant="8" id="cuD-uZ-1eU"/>
+                            <constraint firstItem="F5F-JW-VFg" firstAttribute="top" secondItem="8ef-Id-KQu" secondAttribute="bottom" constant="8" id="fg9-gU-bkJ"/>
+                            <constraint firstItem="P69-X3-clU" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="gr1-qB-YbU"/>
+                            <constraint firstItem="8ef-Id-KQu" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="iN1-CO-dci"/>
+                            <constraint firstItem="FDt-9Q-j4U" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="k69-tm-avS"/>
+                            <constraint firstItem="fgb-iT-z3G" firstAttribute="trailing" secondItem="F5F-JW-VFg" secondAttribute="trailing" constant="16" id="mRU-Qy-awJ"/>
+                            <constraint firstItem="F5F-JW-VFg" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="o2A-gN-VWo"/>
+                            <constraint firstItem="DeH-E9-CIU" firstAttribute="top" secondItem="P69-X3-clU" secondAttribute="bottom" constant="-26" id="o3U-NU-OlJ"/>
+                            <constraint firstItem="F5F-JW-VFg" firstAttribute="leading" secondItem="fgb-iT-z3G" secondAttribute="leading" constant="16" id="oAN-Ym-9lx"/>
+                            <constraint firstItem="fgb-iT-z3G" firstAttribute="top" secondItem="e1L-vI-RiR" secondAttribute="top" constant="10" id="pXj-YO-Y5S"/>
+                            <constraint firstItem="DeH-E9-CIU" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="tsb-UN-2L5"/>
+                            <constraint firstItem="hPs-Mb-6sf" firstAttribute="centerX" secondItem="fgb-iT-z3G" secondAttribute="centerX" id="w9q-vV-VYq"/>
+                            <constraint firstItem="ZpY-Jp-KqT" firstAttribute="leading" secondItem="fgb-iT-z3G" secondAttribute="leading" constant="16" id="xu4-BR-ZIq"/>
+                            <constraint firstItem="P69-X3-clU" firstAttribute="top" secondItem="FDt-9Q-j4U" secondAttribute="bottom" constant="8" id="zhT-Oh-GNO"/>
+                            <constraint firstItem="fgb-iT-z3G" firstAttribute="trailing" secondItem="ZpY-Jp-KqT" secondAttribute="trailing" constant="16" id="zjF-J1-X2U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fgb-iT-z3G"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mlg-40-9DB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3260" y="3138.9805097451276"/>
+        </scene>
+        <!--Earn Free Rides How To View Controller-->
+        <scene sceneID="6TN-Cm-C6D">
+            <objects>
+                <viewController storyboardIdentifier="EarnFreeRidesHowToViewController" id="hYY-B7-dPz" customClass="EarnFreeRidesHowToViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1V8-RT-KPC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D85-KD-mUh">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="evM-zV-NsW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earn Free Rides!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-3U-kZe">
+                                <rect key="frame" x="88" y="121" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="qc1-cU-yHW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends icon" translatesAutoresizingMaskIntoConstraints="NO" id="Oqw-NW-GPZ">
+                                <rect key="frame" x="89" y="207" width="197" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="QUB-qf-igV"/>
+                                    <constraint firstAttribute="height" constant="161" id="Rt6-yv-tK7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite your friends so that you can roll out with the squad!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D4-NK-0oL">
+                                <rect key="frame" x="16" y="451" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="tx8-cB-dZB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpM-9w-4P1">
+                                <rect key="frame" x="93" y="563" width="189" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="SIH-FH-FJ8"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="h2C-3k-ojg">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="7Nh-LP-cOE"/>
+                                    <constraint firstAttribute="height" constant="56" id="Vgp-cZ-9lH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oqw-NW-GPZ" firstAttribute="top" secondItem="eM7-3U-kZe" secondAttribute="bottom" constant="51" id="8Of-v0-f6T"/>
+                            <constraint firstItem="EpM-9w-4P1" firstAttribute="centerX" secondItem="R4N-XX-3ja" secondAttribute="centerX" id="Pqx-LR-2Xo"/>
+                            <constraint firstItem="eM7-3U-kZe" firstAttribute="top" secondItem="D85-KD-mUh" secondAttribute="bottom" constant="25" id="SZQ-yU-aDQ"/>
+                            <constraint firstItem="4D4-NK-0oL" firstAttribute="leading" secondItem="R4N-XX-3ja" secondAttribute="leading" constant="16" id="TSe-bg-H5n"/>
+                            <constraint firstItem="R4N-XX-3ja" firstAttribute="bottom" secondItem="EpM-9w-4P1" secondAttribute="bottom" constant="20" id="WQH-fI-Gh1"/>
+                            <constraint firstItem="Oqw-NW-GPZ" firstAttribute="centerX" secondItem="R4N-XX-3ja" secondAttribute="centerX" id="WW4-oM-17n"/>
+                            <constraint firstItem="eM7-3U-kZe" firstAttribute="centerX" secondItem="R4N-XX-3ja" secondAttribute="centerX" id="c7c-G7-OL9"/>
+                            <constraint firstItem="R4N-XX-3ja" firstAttribute="trailing" secondItem="4D4-NK-0oL" secondAttribute="trailing" constant="16" id="eeR-ng-RQY"/>
+                            <constraint firstItem="R4N-XX-3ja" firstAttribute="top" secondItem="h2C-3k-ojg" secondAttribute="top" constant="10" id="m52-OD-Jfz"/>
+                            <constraint firstItem="D85-KD-mUh" firstAttribute="top" secondItem="h2C-3k-ojg" secondAttribute="bottom" constant="8" id="pTf-gx-VQw"/>
+                            <constraint firstItem="D85-KD-mUh" firstAttribute="centerX" secondItem="R4N-XX-3ja" secondAttribute="centerX" id="sYf-A9-9p4"/>
+                            <constraint firstItem="EpM-9w-4P1" firstAttribute="top" secondItem="4D4-NK-0oL" secondAttribute="bottom" constant="28" id="xgd-Pg-qxO"/>
+                            <constraint firstItem="h2C-3k-ojg" firstAttribute="centerX" secondItem="R4N-XX-3ja" secondAttribute="centerX" id="yKr-GZ-gAt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R4N-XX-3ja"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7q-KS-hVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3933.5999999999999" y="3151.5742128935535"/>
+        </scene>
+        <!--Please Obey The Law View Controller-->
+        <scene sceneID="HUT-bT-s7k">
+            <objects>
+                <viewController storyboardIdentifier="PleaseObeyTheLawViewController" id="pjU-iD-rND" customClass="PleaseObeyTheLawViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Erl-cI-FxV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Zoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVW-6B-isg">
+                                <rect key="frame" x="135" y="74" width="105" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="m0S-mf-fEh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Obey the Law" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL7-bG-OTL">
+                                <rect key="frame" x="60" y="121" width="255" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="rPF-8E-x27"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-dp-hec">
+                                <rect key="frame" x="93" y="563" width="189" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="r89-eQ-rAM"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3JY-de-VJP">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="OX6-x4-f84"/>
+                                    <constraint firstAttribute="height" constant="56" id="vgW-36-Jni"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWX-9Z-8Rt">
+                                <rect key="frame" x="22" y="293" width="331" height="101.5"/>
+                                <string key="text">Do not ride on sidewalks
+Do not grab onto moving vehicles
+Do not ride in public parking garages
+Do not ride without a helmet
+Do not ride without a valid driver’s license</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3JY-de-VJP" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="AeQ-pR-RXF"/>
+                            <constraint firstItem="tJr-dp-hec" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="O4u-4V-IHo"/>
+                            <constraint firstItem="uVW-6B-isg" firstAttribute="top" secondItem="3JY-de-VJP" secondAttribute="bottom" constant="8" id="QTW-dB-gN0"/>
+                            <constraint firstItem="68Q-jJ-S3q" firstAttribute="bottom" secondItem="tJr-dp-hec" secondAttribute="bottom" constant="20" id="ThI-LF-wdw"/>
+                            <constraint firstItem="68Q-jJ-S3q" firstAttribute="trailing" secondItem="SWX-9Z-8Rt" secondAttribute="trailing" constant="22" id="UYW-yJ-W5m"/>
+                            <constraint firstItem="68Q-jJ-S3q" firstAttribute="top" secondItem="3JY-de-VJP" secondAttribute="top" constant="10" id="VfQ-V9-u6Q"/>
+                            <constraint firstItem="SWX-9Z-8Rt" firstAttribute="leading" secondItem="68Q-jJ-S3q" secondAttribute="leading" constant="22" id="bEC-qH-0vf"/>
+                            <constraint firstItem="SWX-9Z-8Rt" firstAttribute="centerY" secondItem="68Q-jJ-S3q" secondAttribute="centerY" id="h5b-xo-eGn"/>
+                            <constraint firstItem="uVW-6B-isg" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="m6H-rC-2tj"/>
+                            <constraint firstItem="SWX-9Z-8Rt" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="qVM-8r-JF8"/>
+                            <constraint firstItem="xL7-bG-OTL" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="qbx-9f-T3O"/>
+                            <constraint firstItem="xL7-bG-OTL" firstAttribute="top" secondItem="uVW-6B-isg" secondAttribute="bottom" constant="25" id="yFt-51-hTy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="68Q-jJ-S3q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWa-6R-mAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4628" y="3147.9760119940033"/>
         </scene>
         <!--Custom Form View Controller-->
         <scene sceneID="5Ib-7J-5sH">
@@ -1409,17 +2174,27 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5 star" width="470" height="92"/>
+        <image name="End trip button" width="342" height="206"/>
         <image name="Free rides slogan" width="601" height="668"/>
         <image name="Zooter Icon" width="131" height="166"/>
         <image name="account icon" width="71" height="70"/>
+        <image name="bike lane icon" width="417" height="417"/>
+        <image name="brake icon" width="604" height="252"/>
         <image name="card icon" width="66" height="66"/>
         <image name="charger icon" width="76" height="77"/>
+        <image name="friends icon" width="468" height="468"/>
         <image name="giftbox" width="90" height="90"/>
         <image name="helmet icon" width="75" height="76"/>
         <image name="history icon" width="71" height="70"/>
+        <image name="kick to start" width="314" height="352"/>
+        <image name="lock" width="1600" height="1600"/>
         <image name="party" width="1277" height="721"/>
         <image name="safety icon" width="57" height="68"/>
+        <image name="scooter park" width="407" height="265"/>
         <image name="settings icon" width="68" height="68"/>
+        <image name="throttle icon" width="604" height="171"/>
         <image name="zoot logo purple" width="260" height="153"/>
+        <image name="zoot_logo" width="1050" height="619"/>
     </resources>
 </document>
