@@ -13,7 +13,7 @@ import SwiftyJSON
 import CoreLocation
 
 class NetworkHelper {
-    let DOMAIN = "https://ridezoot-server.herokuapp.com"
+    let DOMAIN = Bundle.main.infoDictionary!["API_BASE_URL"] as! String
     
     func updateAuthData(rawSuccessData: Any, response: DataResponse<Any>) {
         let data = rawSuccessData as! NSDictionary
