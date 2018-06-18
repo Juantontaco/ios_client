@@ -58,8 +58,7 @@ class SwipeableViewController: UIViewController {
         "ParkingViewController",
         "EndingYourExperienceViewController",
         "EarnFreeRidesHowToViewController",
-        "PleaseObeyTheLawViewController",
-        "MenuViewController"
+        "PleaseObeyTheLawViewController"
     ]
     
     var initialContentOffset = CGPoint() // scrollView initial offset
