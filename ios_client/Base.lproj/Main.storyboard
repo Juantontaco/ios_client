@@ -1312,25 +1312,6 @@ U3dpcGUgdG8gY29udGludWUg4oC64oC64oC6DAsKCgogA
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-dp-hec">
-                                <rect key="frame" x="93" y="563" width="189" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="r89-eQ-rAM"/>
-                                </constraints>
-                                <string key="text" base64-UTF8="YES">
-4oC54oC54oC5IFN3aXBlIHRvIGNvbnRpbnVlIOKAuuKAuuKAugwLCgoKIA
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3JY-de-VJP">
-                                <rect key="frame" x="126" y="10" width="122" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="OX6-x4-f84"/>
-                                    <constraint firstAttribute="height" constant="56" id="vgW-36-Jni"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWX-9Z-8Rt">
                                 <rect key="frame" x="22" y="293" width="331" height="101.5"/>
                                 <string key="text">Do not ride on sidewalks
@@ -1342,15 +1323,32 @@ Do not ride without a valid driver’s license</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoot_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3JY-de-VJP">
+                                <rect key="frame" x="126" y="10" width="122" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="OX6-x4-f84"/>
+                                    <constraint firstAttribute="height" constant="56" id="vgW-36-Jni"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5c-UI-p2O">
+                                <rect key="frame" x="145" y="588" width="84" height="34"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <state key="normal" title="Go Home!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHomeButtonPressed:" destination="pjU-iD-rND" eventType="touchUpInside" id="nTr-aH-XRf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.53725490200000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="K5c-UI-p2O" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="38U-SP-jOq"/>
                             <constraint firstItem="3JY-de-VJP" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="AeQ-pR-RXF"/>
-                            <constraint firstItem="tJr-dp-hec" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="O4u-4V-IHo"/>
                             <constraint firstItem="uVW-6B-isg" firstAttribute="top" secondItem="3JY-de-VJP" secondAttribute="bottom" constant="8" id="QTW-dB-gN0"/>
-                            <constraint firstItem="68Q-jJ-S3q" firstAttribute="bottom" secondItem="tJr-dp-hec" secondAttribute="bottom" constant="20" id="ThI-LF-wdw"/>
                             <constraint firstItem="68Q-jJ-S3q" firstAttribute="trailing" secondItem="SWX-9Z-8Rt" secondAttribute="trailing" constant="22" id="UYW-yJ-W5m"/>
                             <constraint firstItem="68Q-jJ-S3q" firstAttribute="top" secondItem="3JY-de-VJP" secondAttribute="top" constant="10" id="VfQ-V9-u6Q"/>
+                            <constraint firstItem="68Q-jJ-S3q" firstAttribute="bottom" secondItem="K5c-UI-p2O" secondAttribute="bottom" constant="45" id="aAA-Zp-xky"/>
                             <constraint firstItem="SWX-9Z-8Rt" firstAttribute="leading" secondItem="68Q-jJ-S3q" secondAttribute="leading" constant="22" id="bEC-qH-0vf"/>
                             <constraint firstItem="SWX-9Z-8Rt" firstAttribute="centerY" secondItem="68Q-jJ-S3q" secondAttribute="centerY" id="h5b-xo-eGn"/>
                             <constraint firstItem="uVW-6B-isg" firstAttribute="centerX" secondItem="68Q-jJ-S3q" secondAttribute="centerX" id="m6H-rC-2tj"/>

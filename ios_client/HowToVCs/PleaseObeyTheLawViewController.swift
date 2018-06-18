@@ -22,14 +22,14 @@ class PleaseObeyTheLawViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func goHomeButtonPressed(_ sender: Any) {
+        
+        let homeVC : HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        
+        homeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        present(homeVC, animated: true, completion: nil)
     }
-    */
+    
 
 }
