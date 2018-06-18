@@ -19,14 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-//        (window?.rootViewController as! UINavigationController).becomeTransparent()
         
         IQKeyboardManager.shared.enable = true
         
         STPPaymentConfiguration.shared().publishableKey = "pk_test_kqpRhfWQYjvyIUjHghs41Nab"
-        
         
         
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: "user")
@@ -35,15 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             LocationHelper.shared
             
-            let accountViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
-//            
-//            (window?.rootViewController as! UINavigationController).setViewControllers([accountViewController!], animated: true)
-//            
-            window?.rootViewController = accountViewController
+            let homeViewController : HomeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+  
+            window?.rootViewController = homeViewController
             
             NetworkHelper().checkIfInRide(completion: {isInRide, rideId in
                 if isInRide {
-                    let inRideVC : InRideViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InRideViewController") as? InRideViewController)!
+                    let inRideVC : InRideViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InRideViewController") as! InRideViewController
                     
                     inRideVC.rideId = rideId
                     inRideVC.needToResume = true

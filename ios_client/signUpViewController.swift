@@ -47,11 +47,10 @@ class SignUpViewController: UIViewController {
             if didWork {
                 print("did create account")
                 
-                let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as? AccountViewController
+                let swipeVC : SwipeableViewController = SwipeableViewController()
+                swipeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
                 
-//                self.navigationController?.setViewControllers([accountViewController!], animated: true)
-                
-                self.present(accountViewController!, animated: true, completion: nil)
+                self.present(swipeVC, animated: true, completion: nil)
             } else {
                 print("didNotWork")
             }

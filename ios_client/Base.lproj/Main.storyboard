@@ -1619,19 +1619,8 @@ Do not ride without a valid driver’s license</string>
                                     <action selector="howToPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="Uez-qd-6PX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09z-4o-eVo">
-                                <rect key="frame" x="41" y="415" width="57" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="SAFETY">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="safetyPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="sFN-Ie-bEB"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pk-Wa-ZNe">
-                                <rect key="frame" x="41" y="455" width="67" height="32"/>
+                                <rect key="frame" x="38" y="415" width="67" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="HISTORY">
@@ -1639,17 +1628,6 @@ Do not ride without a valid driver’s license</string>
                                 </state>
                                 <connections>
                                     <action selector="historyPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="lK9-bI-VKN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw4-gg-YBl">
-                                <rect key="frame" x="41" y="495" width="75" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="SETTINGS">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingsPressed:" destination="ZZU-KA-dAl" eventType="touchUpInside" id="Gva-JE-XS6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auu-mR-xPB">
@@ -1702,16 +1680,8 @@ Do not ride without a valid driver’s license</string>
                                 <rect key="frame" x="0.0" y="374" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="safety icon" translatesAutoresizingMaskIntoConstraints="NO" id="mLG-t1-Yxc">
-                                <rect key="frame" x="0.0" y="414" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="history icon" translatesAutoresizingMaskIntoConstraints="NO" id="QoE-3r-DQo">
-                                <rect key="frame" x="0.0" y="454" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings icon" translatesAutoresizingMaskIntoConstraints="NO" id="5pT-fJ-Mkj">
-                                <rect key="frame" x="0.0" y="494" width="33" height="33"/>
+                                <rect key="frame" x="0.0" y="415" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1726,8 +1696,6 @@ Do not ride without a valid driver’s license</string>
                         <outlet property="howToButton" destination="Q1u-XV-g5n" id="Fuu-py-KHr"/>
                         <outlet property="paymentButton" destination="pRS-rw-3Cb" id="KAv-a1-bRh"/>
                         <outlet property="requestHelmetButton" destination="bDF-HV-MkF" id="puW-h3-ezC"/>
-                        <outlet property="safetyButton" destination="09z-4o-eVo" id="svY-gB-l9K"/>
-                        <outlet property="settingsButton" destination="jw4-gg-YBl" id="KbT-jR-nWv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBM-Gf-Ci7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2190,9 +2158,7 @@ Do not ride without a valid driver’s license</string>
         <image name="kick to start" width="314" height="352"/>
         <image name="lock" width="1600" height="1600"/>
         <image name="party" width="1277" height="721"/>
-        <image name="safety icon" width="57" height="68"/>
         <image name="scooter park" width="407" height="265"/>
-        <image name="settings icon" width="68" height="68"/>
         <image name="throttle icon" width="604" height="171"/>
         <image name="zoot logo purple" width="260" height="153"/>
         <image name="zoot_logo" width="1050" height="619"/>
