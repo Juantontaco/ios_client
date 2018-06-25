@@ -76,7 +76,7 @@ class SelectPaymentViewController: UIViewController, UITableViewDelegate, UITabl
         
         var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         
-        if indexPath.count > 0 {
+        if indexPath.count > 0 && sources != nil && sources.count > indexPath.row {
             let newCell : PaymentSourceTableViewCell = Bundle.main.loadNibNamed("PaymentSourceTableViewCellView", owner: self, options: nil)!.first as! PaymentSourceTableViewCell
             
             newCell.paymentSource = sources[indexPath.row]
